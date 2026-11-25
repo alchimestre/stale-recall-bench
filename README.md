@@ -7,7 +7,7 @@ A benchmark for coding-agent memory: it feeds your memory system notes that were
 | Fact | Detail |
 | --- | --- |
 | Origin | Built by the author of [Truthiness](https://github.com/alchimestre/truthiness), a memory system this benchmark can score |
-| Bundled memory systems | None; `adapters/flat.ts` is a reference control, not a candidate |
+| Bundled memory systems | `adapters/truthiness.ts`, pinned to the `truthiness` npm package in `package.json`; `adapters/flat.ts` is a reference control, not a candidate |
 | Case selection | Fixed before any adapter was scored; the rules are listed below |
 
 ## Cases
@@ -98,6 +98,9 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
    | flat | 60/60 | 60/60 | 2/2 | 8/8 | 26/26 | 24/24 | 31/31 | 29/29 |
    | ideal | 0/60 | 60/60 | 0/2 | 0/8 | 0/26 | 0/24 | 0/31 | 0/29 |
+   | truthiness | 0/60 | 60/60 | 0/2 | 0/8 | 0/26 | 0/24 | 0/31 | 0/29 |
+
+   `adapters/truthiness.ts` reads `TRUTHINESS_CLI` (default: the pinned package) and `TRUTHINESS_BOOTSTRAP=off` to skip seeding the store from source.
 
 3. Agent tier: one [OMP](https://github.com/can1357/oh-my-pi) session per case and arm in an offline AMD64 SWE-bench container. Arm `none` gets no recall; each adapter adds one arm. Requires Docker, `omp`, `uv`, `jq`, credentials for the model, and the images listed in `cases.json`.
 
