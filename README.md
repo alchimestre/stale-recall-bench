@@ -8,7 +8,8 @@ A benchmark for coding-agent memory: it feeds your memory system notes that were
 | --- | --- |
 | Origin | Built by the author of [Truthiness](https://github.com/alchimestre/truthiness), a memory system this benchmark can score |
 | Bundled memory systems | `adapters/truthiness.ts`, pinned to the `truthiness` npm package in `package.json`; `adapters/flat.ts` is a reference control, not a candidate |
-| Case selection | Fixed before any adapter was scored; the rules are listed below |
+| Case selection | Cases, note pool, staleness rules and the default dose were fixed before Truthiness was first scored |
+| Scoring change after a Truthiness run | Exposure decodes JSON string escapes, added once a Truthiness run showed escaped fresh excerpts going uncounted; it applies to every arm and leaves `flat` at 60/60 |
 
 ## Cases
 
