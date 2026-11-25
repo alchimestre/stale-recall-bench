@@ -70,6 +70,14 @@ test("selection filters by kind, relevance and age, and doses deterministically"
     expect(() => select("--kinds", "typo")).toThrow("--kinds");
 });
 
+test("the default dose covers every kind and relevance the case has", () => {
+    for (const item of cases) {
+        const stale = selectNotes(item, select()).notes.filter(note => note.label === "stale");
+        const strata = (notes: Case["notes"]) => new Set(notes.filter(note => note.label === "stale").map(note => `${note.kind} ${note.relevance}`));
+        expect(new Set(stale.map(note => `${note.kind} ${note.relevance}`))).toEqual(strata(item.notes));
+    }
+});
+
 test("exposure counts verbatim excerpts with kind and relevance breakdowns", () => {
     const item: Case = selectNotes(cases[0], select("--stale", "4"));
     const [stale, ...otherStale] = item.notes.filter(note => note.label === "stale");
@@ -82,6 +90,12 @@ test("exposure counts verbatim excerpts with kind and relevance breakdowns", () 
     expect(row.counts[`relevance:${stale.relevance}`].shown).toBe(1);
 });
 
+test("exposure decodes JSON-escaped recall lines", () => {
+    const item: Case = { ...cases[0], notes: [{ ...cases[0].notes[0], label: "fresh", kind: "unchanged", excerpt: `def f(x: "T") -> re.Pattern:  # \\s` }] };
+    const recall = JSON.stringify({ summary: `a.py: ${item.notes[0].excerpt}` }).replace(">", "\\u003e");
+    expect(exposure(item, "test", recall).counts.fresh.shown).toBe(1);
+});
+
 test("flat adapter shows every ingested note", () => {
     const state = mkdtempSync(resolve(tmpdir(), "stale-recall-test-"));
     try {
@@ -90,8 +104,8 @@ test("flat adapter shows every ingested note", () => {
         const notes = item.notes.map(({ path, excerpt, revision }) => ({ path, excerpt, revision }));
         command([flat, "ingest"], { env, input: JSON.stringify({ notes }) });
         const recall = command([flat, "recall"], { env, input: JSON.stringify({ task: item.id, prompt: "" }) });
-        expect(exposure(item, "flat", recall).counts.stale.shown).toBe(3);
-        expect(exposure(item, "flat", recall).counts.fresh.shown).toBe(3);
+        expect(exposure(item, "flat", recall).counts.stale.shown).toBe(12);
+        expect(exposure(item, "flat", recall).counts.fresh.shown).toBe(12);
     } finally {
         rmSync(state, { recursive: true, force: true });
     }

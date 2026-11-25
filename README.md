@@ -44,7 +44,7 @@ bun run verify-cases
 | `--kinds` | all four | Comma list of stale kinds |
 | `--relevance` | `fix-path,off-path` | Comma list; applies to stale and fresh notes |
 | `--min-age-days`, `--max-age-days` | `0`, `Infinity` | Age range; applies to stale and fresh notes |
-| `--stale` | `3` | Stale notes per case: a number or `all` |
+| `--stale` | `12` | Stale notes per case: a number or `all`. Taken one per kind and relevance in turn, so rare kinds are always in the dose |
 | `--fresh` | `match` | Fresh notes per case: a number, `all`, or `match` (same count as stale) |
 | `--seed` | `0` | Picks which notes fill the dose; same flags pick the same notes |
 
@@ -94,10 +94,10 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
    bun run exposure adapters/flat.ts path/to/your-adapter
    ```
 
-   | Arm | stale | fresh | kind:renamed | kind:edited | kind:deleted | relevance:fix-path | relevance:off-path |
-   | --- | --- | --- | --- | --- | --- | --- | --- |
-   | flat | 15/15 | 15/15 | 1/1 | 7/7 | 7/7 | 6/6 | 9/9 |
-   | ideal | 0/15 | 15/15 | 0/1 | 0/7 | 0/7 | 0/6 | 0/9 |
+   | Arm | stale | fresh | kind:moved | kind:renamed | kind:edited | kind:deleted | relevance:fix-path | relevance:off-path |
+   | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+   | flat | 60/60 | 60/60 | 2/2 | 8/8 | 26/26 | 24/24 | 31/31 | 29/29 |
+   | ideal | 0/60 | 60/60 | 0/2 | 0/8 | 0/26 | 0/24 | 0/31 | 0/29 |
 
 3. Agent tier: one [OMP](https://github.com/can1357/oh-my-pi) session per case and arm in an offline AMD64 SWE-bench container. Arm `none` gets no recall; each adapter adds one arm. Requires Docker, `omp`, `uv`, `jq`, credentials for the model, and the images listed in `cases.json`.
 
@@ -123,12 +123,12 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
 - The case is the sampling unit: with 5 cases the smallest sign-test p is 0.0625, so no single comparison reaches 0.05.
 - Never pool runs from different models.
 - Agent-tier sessions get one tool, a shell inside the task container, with no network and a single-commit history.
-- Exposure matching is verbatim; a system that paraphrases notes scores as showing none of them.
+- Exposure matching is verbatim after decoding JSON string escapes; a system that paraphrases notes scores as showing none of them.
 - Sphinx has almost no `moved` notes (2); `--kinds moved` leaves most cases empty.
 - Kind rules are line heuristics on `git diff --unified=0` hunks; a rewrite split across hunks counts as `deleted`.
 - Age buckets are targets: each revision is the newest commit to the file at or before its target date.
 - Regenerating the pool invalidates earlier runs; `report` refuses runs made on a different `cases.json`.
-- Under the default selection no case has a countable stale symbol, so stale-symbol commands are 0 by construction; the report prints the countable count beside it. Use `--kinds renamed,deleted --stale all` when that metric matters.
+- With a small `--stale` dose some cases have no countable stale symbol, so their stale-symbol commands are 0 by construction; the report prints the countable count beside it.
 
 ## License
 

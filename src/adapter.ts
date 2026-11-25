@@ -7,6 +7,7 @@ import { kindNames } from "./staleness/index.ts";
 
 export const recallCharLimit = 6000;
 const adapterTimeoutMs = 120_000;
+const hexRadix = 16;
 
 type Tally = { shown: number; total: number };
 // Keys: `stale`, `fresh`, then stale breakdowns `kind:<kind>` and `relevance:<relevance>`.
@@ -37,12 +38,13 @@ export function recallFor(adapter: string, item: Case, prompt: string, stateRoot
     }
 }
 
-// A note counts as shown when its excerpt appears verbatim anywhere in the recall text.
+// A note counts as shown when its excerpt appears verbatim in the recall text, as is or with JSON string escapes decoded.
 export function exposure(item: Case, arm: string, recall: string): Exposure {
     const counts: Record<string, Tally> = Object.fromEntries(breakdownKeys.map(key => [key, { shown: 0, total: 0 }]));
     const shownNotes: string[] = [];
+    const decoded = recall.replace(/\\u([0-9a-fA-F]{4})|\\(["\\/])/g, (_, code: string | undefined, character: string) => (code ? String.fromCharCode(parseInt(code, hexRadix)) : character));
     for (const note of item.notes) {
-        const shown = recall.includes(note.excerpt);
+        const shown = recall.includes(note.excerpt) || decoded.includes(note.excerpt);
         const keys = note.label === "stale" ? ["stale", `kind:${note.kind}`, `relevance:${note.relevance}`] : ["fresh"];
         for (const key of keys) {
             counts[key].total++;
