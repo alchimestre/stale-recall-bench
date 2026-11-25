@@ -8,7 +8,7 @@ grade() {
     local prediction=$1 key run_id
     key=$(jq -er '.[0].model_name_or_path' "$prediction")
     # The harness names grading containers by instance and run id; parallel grades of one instance need distinct run ids.
-    run_id="g-$(basename "$(dirname "$prediction")" | shasum | cut -c1-8)"
+    run_id="g-$(basename "$(dirname "$prediction")" | shasum | cut -c1-8)-$key"
     cd "$(dirname "$prediction")"
     uv run --no-project --python 3.12 --with swebench==4.1.0 python -m swebench.harness.run_evaluation \
         --dataset_name princeton-nlp/SWE-bench_Verified --split test --instance_ids "$(jq -er '.[0].instance_id' "$prediction")" \
