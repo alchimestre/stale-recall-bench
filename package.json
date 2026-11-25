@@ -1,0 +1,20 @@
+{
+  "name": "stale-recall-bench",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "bun@1.4.4",
+  "scripts": {
+    "exposure": "bun src/exposure.ts",
+    "agent": "bun src/agent.ts",
+    "report": "bun src/report.ts",
+    "verify-cases": "bun src/verify-cases.ts",
+    "test": "bun test",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@oh-my-pi/pi-coding-agent": "19.0.1",
+    "@types/bun": "1.4.4",
+    "typescript": "5.9.3"
+  }
+}

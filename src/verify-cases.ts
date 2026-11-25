@@ -1,0 +1,17 @@
+// usage: bun src/verify-cases.ts  Checks every note label against the pinned upstream source.
+import assert from "node:assert/strict";
+import { cases, fileAt } from "./cases.ts";
+
+const lines = (text: string | undefined) => (text ?? "").split("\n").map(line => line.trim());
+
+for (const item of cases) {
+    const excerpts = item.notes.map(note => note.excerpt);
+    for (const note of item.notes) {
+        const where = `${item.id} ${note.path}: ${note.excerpt}`;
+        assert(lines(fileAt(note.revision, note.path)).includes(note.excerpt), `${where} is missing at its own revision`);
+        const atBase = lines(fileAt(item.base, note.path)).filter(line => line === note.excerpt).length;
+        assert.equal(atBase, note.label === "fresh" ? 1 : 0, `${where} is not ${note.label} at the base revision`);
+        assert(excerpts.every(other => other === note.excerpt || !other.includes(note.excerpt)), `${where} is inside another note's excerpt`);
+    }
+    console.log(`${item.id}: ${item.notes.length} notes verified`);
+}

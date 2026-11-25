@@ -1,0 +1,184 @@
+{
+  "repository": "https://github.com/sphinx-doc/sphinx.git",
+  "curriculum": "https://raw.githubusercontent.com/thomasjoshi/agents-never-forget/74a38a90baace25635f3827ee2f98caff24b3768/data/SWE-Bench-CL-Curriculum.json",
+  "curriculum_sha256": "91bc39a769b6218419bd44308650e5d2c846ecd3e6f7a6c086f74a37b6db90f7",
+  "cases": [
+    {
+      "id": "sphinx-doc__sphinx-7590",
+      "base": "2e506c5ab457cba743bb47eb5b8c8eb9dd51d23d",
+      "created_at": "2020-05-01T18:29:11+00:00",
+      "image": "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7590@sha256:1518e4ea72ffff0ec1dddd3713ac9a99cd87ca225cdcb01ee5f34c12acb6d31c",
+      "prompt_sha256": "23b9b88e30541f1109b04492ccf35a93a15fdeecb2b736bf22be5a2a6173f84e",
+      "notes": [
+        {
+          "label": "stale",
+          "path": "sphinx/domains/cpp.py",
+          "excerpt": "class ASTAttribute(ASTBase):",
+          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+        },
+        {
+          "label": "stale",
+          "path": "sphinx/domains/cpp.py",
+          "excerpt": "class ASTCPPAttribute(ASTAttribute):",
+          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+        },
+        {
+          "label": "fresh",
+          "path": "sphinx/domains/cpp.py",
+          "excerpt": "class ASTExpression(ASTBase):",
+          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+        },
+        {
+          "label": "stale",
+          "path": "sphinx/domains/cpp.py",
+          "excerpt": "class ASTGnuAttribute(ASTBase):",
+          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+        },
+        {
+          "label": "fresh",
+          "path": "sphinx/domains/cpp.py",
+          "excerpt": "class ASTLiteral(ASTExpression):",
+          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+        },
+        {
+          "label": "fresh",
+          "path": "sphinx/domains/cpp.py",
+          "excerpt": "class ASTPointerLiteral(ASTLiteral):",
+          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+        }
+      ]
+    },
+    {
+      "id": "sphinx-doc__sphinx-8548",
+      "base": "dd1615c59dc6fff633e27dbb3861f2d27e1fb976",
+      "created_at": "2020-12-17T13:46:32+00:00",
+      "image": "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8548@sha256:cd774ce3e168ff6eab9aaa110952b2a6f039d45336b532768eb9431a063d7985",
+      "prompt_sha256": "f0c8a912cffb03b9d6346146e11cf044329280bfe2a193fd9e46980b193cffb0",
+      "notes": [
+        {
+          "label": "stale",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "excerpt": "__mro__ = safe_getattr(obj, '__mro__', None)",
+          "revision": "bec552c3efa9ce452dea8549c517428fcb98f30d"
+        },
+        {
+          "label": "fresh",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "excerpt": "def _getmro(obj: Any) -> Tuple[\"Type\", ...]:",
+          "revision": "bec552c3efa9ce452dea8549c517428fcb98f30d"
+        }
+      ]
+    },
+    {
+      "id": "sphinx-doc__sphinx-9229",
+      "base": "876fa81e0a038cda466925b85ccf6c5452e0f685",
+      "created_at": "2021-05-15T07:21:49+00:00",
+      "image": "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-9229@sha256:ed5fc083440abc3c9219eec2102bc4977540194d914db119f9e4d758ef8ff24a",
+      "prompt_sha256": "b7113d548cb7ce3722699857d638d2acf607a5547ab13feaff1272d633d15e58",
+      "notes": [
+        {
+          "label": "stale",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "excerpt": "annotations = inspect.getannotations(parent)",
+          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
+        },
+        {
+          "label": "fresh",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "excerpt": "class UninitializedInstanceAttributeMixin(DataDocumenterMixinBase):",
+          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
+        },
+        {
+          "label": "fresh",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "excerpt": "def __init__(self):",
+          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
+        },
+        {
+          "label": "fresh",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "excerpt": "def filter_members(self, members: ObjectMembers, want_all: bool",
+          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
+        },
+        {
+          "label": "stale",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "excerpt": "def get_attribute_comment(self, parent: Any) -> Optional[List[str]]:",
+          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
+        },
+        {
+          "label": "stale",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "excerpt": "def is_filtered_inherited_member(name: str) -> bool:",
+          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
+        }
+      ]
+    },
+    {
+      "id": "sphinx-doc__sphinx-9461",
+      "base": "939c7bb7ff7c53a4d27df067cea637540f0e1dad",
+      "created_at": "2021-07-17T06:31:58+00:00",
+      "image": "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-9461@sha256:7002375c0d6c01c893097a1214c94186f573b15d71d3ead09f50e0d5002deee0",
+      "prompt_sha256": "cc2eb5d4afca2da5e00ca423f2dce2bf467613a98b9686da7dc19a08e1f4de0f",
+      "notes": [
+        {
+          "label": "stale",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "excerpt": "annotations = get_type_hints(self.parent, None, self.config.autodoc_type_aliases)",
+          "revision": "b187ca0951cb270013e5b0cc361d6cecc1d4d616"
+        },
+        {
+          "label": "fresh",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "excerpt": "def get_attribute_comment(self, parent: Any, attrname: str) -> Optional[List[str]]:",
+          "revision": "b187ca0951cb270013e5b0cc361d6cecc1d4d616"
+        }
+      ]
+    },
+    {
+      "id": "sphinx-doc__sphinx-11510",
+      "base": "6cb783c0024a873722952a67ebb9f41771c8eb6d",
+      "created_at": "2023-07-24T22:46:12+00:00",
+      "image": "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-11510@sha256:1bd9c81ce4a2db48c547237d0ac9899cab789eca65a0b9e9221b76724023cb13",
+      "prompt_sha256": "e7ae2e2a1619fdc7fa58451dae12c5dd8b268002fdb30b4b3f457a6a9ef26762",
+      "notes": [
+        {
+          "label": "fresh",
+          "path": "sphinx/directives/other.py",
+          "excerpt": "class Centered(SphinxDirective):",
+          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
+        },
+        {
+          "label": "fresh",
+          "path": "sphinx/directives/other.py",
+          "excerpt": "class Include(BaseInclude, SphinxDirective):",
+          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
+        },
+        {
+          "label": "fresh",
+          "path": "sphinx/directives/other.py",
+          "excerpt": "class TabularColumns(SphinxDirective):",
+          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
+        },
+        {
+          "label": "stale",
+          "path": "sphinx/directives/other.py",
+          "excerpt": "def parse_content(self, toctree: addnodes.toctree) -> List[Node]:",
+          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
+        },
+        {
+          "label": "stale",
+          "path": "sphinx/directives/other.py",
+          "excerpt": "def run(self) -> List[Node]:",
+          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
+        },
+        {
+          "label": "stale",
+          "path": "sphinx/directives/other.py",
+          "excerpt": "def setup(app: \"Sphinx\") -> Dict[str, Any]:",
+          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
+        }
+      ]
+    }
+  ]
+}
