@@ -5,12 +5,15 @@ import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import manifest from "../cases.json";
 import { command } from "./command.ts";
+import type { StaleKind } from "./staleness/index.ts";
 
 export type Label = "stale" | "fresh";
 export const labels: Label[] = ["stale", "fresh"];
-export type Note = { label: Label; path: string; excerpt: string; revision: string };
+export type Relevance = "fix-path" | "off-path";
+export const relevances: Relevance[] = ["fix-path", "off-path"];
+export type Note = { label: Label; kind: StaleKind | "unchanged"; relevance: Relevance; path: string; excerpt: string; revision: string; age_days: number; age_commits: number };
 export type Case = { id: string; base: string; created_at: string; image: string; prompt_sha256: string; notes: Note[] };
-type CurriculumRow = { metadata: { instance_id: string }; task: { problem_statement: string } };
+type CurriculumRow = { metadata: { instance_id: string }; task: { problem_statement: string }; evaluation: { patch: string } };
 
 export const cases = manifest.cases as Case[];
 export const root = resolve(import.meta.dir, "..");
@@ -46,8 +49,8 @@ export function fileAt(revision: string, path: string): string | undefined {
     return /^100(644|755) blob /.test(entry) ? git(["show", `${revision}:${path}`]) : undefined;
 }
 
-// Prompts come from the pinned curriculum rather than this repository, so the issue text keeps its upstream license.
-export async function prompts(): Promise<Map<string, string>> {
+// Rows come from the pinned curriculum rather than this repository, so issue text and gold patches keep their upstream license.
+export async function curriculumRows(): Promise<Map<string, CurriculumRow>> {
     if (!existsSync(curriculumFile)) {
         const response = await fetch(manifest.curriculum, { signal: AbortSignal.timeout(fetchTimeoutMs) });
         assert(response.ok, `Curriculum HTTP ${response.status}`);
@@ -57,9 +60,13 @@ export async function prompts(): Promise<Map<string, string>> {
     const raw = await Bun.file(curriculumFile).text();
     assert.equal(sha256(raw), manifest.curriculum_sha256, "Curriculum changed upstream; delete .cache/curriculum.json to refetch");
     const { sequences }: { sequences: { tasks: CurriculumRow[] }[] } = JSON.parse(raw);
-    const rows = new Map(sequences.flatMap(sequence => sequence.tasks).map(row => [row.metadata.instance_id, row.task.problem_statement]));
+    return new Map(sequences.flatMap(sequence => sequence.tasks).map(row => [row.metadata.instance_id, row]));
+}
+
+export async function prompts(): Promise<Map<string, string>> {
+    const rows = await curriculumRows();
     return new Map(cases.map((item): [string, string] => {
-        const prompt = rows.get(item.id);
+        const prompt = rows.get(item.id)?.task.problem_statement;
         assert(prompt && sha256(prompt) === item.prompt_sha256, `Prompt mismatch for ${item.id}`);
         return [item.id, prompt];
     }));

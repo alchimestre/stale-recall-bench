@@ -1,4 +1,4 @@
-// usage: bun src/agent.ts --model <provider/model> --out <run dir> [--max-seconds 600] <adapter>...
+// usage: bun src/agent.ts --model <provider/model> --out <run dir> [--max-seconds 600] [selection flags] <adapter>...
 // Runs one agent session per case and arm. Arm `none` has no recall; each adapter is one more arm.
 import assert from "node:assert/strict";
 import { appendFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
@@ -8,13 +8,17 @@ import { parseArgs } from "node:util";
 import { exposure, recallFor } from "./adapter.ts";
 import { cases, prompts, root, sha256 } from "./cases.ts";
 import { command } from "./command.ts";
+import { parseSelection, selectionOptions, selectNotes } from "./select.ts";
 import { session } from "./session.ts";
 
 const defaultMaxSeconds = "600";
-const harnessFiles = ["cases.json", "src/adapter.ts", "src/agent.ts", "src/cases.ts", "src/hook.ts", "src/session.ts"];
+const harnessFiles = ["cases.json", "src/adapter.ts", "src/agent.ts", "src/cases.ts", "src/hook.ts", "src/select.ts", "src/session.ts"];
+const usage = "usage: bun src/agent.ts --model <provider/model> --out <run dir> [--max-seconds 600] [selection flags] <adapter>...";
 
-const { values, positionals } = parseArgs({ args: Bun.argv.slice(2), allowPositionals: true, options: { model: { type: "string" }, out: { type: "string" }, "max-seconds": { type: "string", default: defaultMaxSeconds } } });
-assert(values.model && values.out, "usage: bun src/agent.ts --model <provider/model> --out <run dir> [--max-seconds 600] <adapter>...");
+const options = { ...selectionOptions, model: { type: "string" }, out: { type: "string" }, "max-seconds": { type: "string", default: defaultMaxSeconds } } as const;
+const { values, positionals } = parseArgs({ args: Bun.argv.slice(2), allowPositionals: true, options });
+assert(values.model && values.out, usage);
+const selection = parseSelection(values);
 const runDir = resolve(values.out);
 assert(!existsSync(runDir), `${runDir} exists; pick a new run directory`);
 const config = { model: values.model, maxSeconds: Number(values["max-seconds"]), runDir };
@@ -24,11 +28,11 @@ assert(!adapters.has("none") && adapters.size === positionals.length, "Adapter n
 
 mkdirSync(runDir, { recursive: true });
 const harness = Object.fromEntries(harnessFiles.map(file => [file, sha256(readFileSync(resolve(root, file), "utf8"))]));
-writeFileSync(resolve(runDir, "manifest.json"), JSON.stringify({ ...config, omp: command(["omp", "--version"]).trim(), arms: ["none", ...adapters.keys()], harness }, null, 2));
+writeFileSync(resolve(runDir, "manifest.json"), JSON.stringify({ ...config, selection, omp: command(["omp", "--version"]).trim(), arms: ["none", ...adapters.keys()], harness }, null, 2));
 const texts = await prompts();
 const state = mkdtempSync(resolve(tmpdir(), "stale-recall-state-"));
 try {
-    for (const item of cases) {
+    for (const item of cases.map(entry => selectNotes(entry, selection))) {
         const prompt = texts.get(item.id)!;
         const recalls = new Map([["none", ""], ...[...adapters].map(([arm, path]): [string, string] => [arm, recallFor(path, item, prompt, resolve(state, arm))])]);
         for (const [arm, recall] of recalls) record({ event: "exposure", ...exposure(item, arm, recall) });

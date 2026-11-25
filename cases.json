@@ -12,39 +12,1153 @@
       "notes": [
         {
           "label": "stale",
-          "path": "sphinx/domains/cpp.py",
+          "kind": "deleted",
+          "excerpt": "def build_main(argv=sys.argv):",
+          "relevance": "off-path",
+          "path": "sphinx/__init__.py",
+          "revision": "004dfae2db177eda4570bfdf4a04ae014ef6ada5",
+          "age_days": 1098,
+          "age_commits": 6436
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def main(argv=sys.argv):",
+          "relevance": "off-path",
+          "path": "sphinx/__init__.py",
+          "revision": "004dfae2db177eda4570bfdf4a04ae014ef6ada5",
+          "age_days": 1098,
+          "age_commits": 6436
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def make_main(argv=sys.argv):",
+          "relevance": "off-path",
+          "path": "sphinx/__init__.py",
+          "revision": "004dfae2db177eda4570bfdf4a04ae014ef6ada5",
+          "age_days": 1098,
+          "age_commits": 6436
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "package_dir = path.abspath(path.dirname(__file__))",
+          "relevance": "off-path",
+          "path": "sphinx/__init__.py",
+          "revision": "004dfae2db177eda4570bfdf4a04ae014ef6ada5",
+          "age_days": 1098,
+          "age_commits": 6436
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "ast = self.parse_definition(parser)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTArray(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTDeclaration(ASTBaseBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, objectType: str, directiveType: str, declaration: Any) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, size: ASTExpression):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_attribute(self) -> Any:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def handle_signature(self, sig: str, signode: TextElement) -> ASTDeclaration:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "param = self._parse_parameters(paramMode)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "parser = DefinitionParser(sig, location=signode)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "value = self._parse_expression_fallback([']'], parser)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class CXRefRole(XRefRole):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_arglist(self, arglist: str) -> Iterator[str]:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_type(self, node: Element, ctype: str) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def add_target_and_index(self, name: str, sig: str, signode: desc_signature) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def after_content(self) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def before_content(self) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def get_index_text(self, name: str) -> str:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def merge_domaindata(self, docnames: List[str], otherdata: Dict) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def note_object(self, name: str, objtype: str, location: Any = None) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def objects(self) -> Dict[str, Tuple[str, str]]:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "domain = cast(CDomain, self.env.get_domain('c'))",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "indextext = self.get_index_text(name)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "e42d546685e7baae3c2618e81152e8a8bdc17ead",
+          "age_days": 307,
+          "age_commits": 1656
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class CDomain(Domain):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "22afc77c488e85ccd51303a223f450705b30217b",
+          "age_days": 410,
+          "age_commits": 2243
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class CObject(ObjectDescription):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "22afc77c488e85ccd51303a223f450705b30217b",
+          "age_days": 410,
+          "age_commits": 2243
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_arglist(self, arglist):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "22afc77c488e85ccd51303a223f450705b30217b",
+          "age_days": 410,
+          "age_commits": 2243
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_type(self, node, ctype):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "22afc77c488e85ccd51303a223f450705b30217b",
+          "age_days": 410,
+          "age_commits": 2243
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def add_target_and_index(self, name, sig, signode):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "22afc77c488e85ccd51303a223f450705b30217b",
+          "age_days": 410,
+          "age_commits": 2243
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def after_content(self):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "22afc77c488e85ccd51303a223f450705b30217b",
+          "age_days": 410,
+          "age_commits": 2243
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def clear_doc(self, docname):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "22afc77c488e85ccd51303a223f450705b30217b",
+          "age_days": 410,
+          "age_commits": 2243
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def get_objects(self):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "22afc77c488e85ccd51303a223f450705b30217b",
+          "age_days": 410,
+          "age_commits": 2243
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "dot = title.rfind('.')",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "22afc77c488e85ccd51303a223f450705b30217b",
+          "age_days": 410,
+          "age_commits": 2243
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "target = target.lstrip('~')  # only has a meaning for the title",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/c.py",
+          "revision": "22afc77c488e85ccd51303a223f450705b30217b",
+          "age_days": 410,
+          "age_commits": 2243
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
           "excerpt": "class ASTAttribute(ASTBase):",
-          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
         },
         {
           "label": "stale",
-          "path": "sphinx/domains/cpp.py",
+          "kind": "deleted",
           "excerpt": "class ASTCPPAttribute(ASTAttribute):",
-          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
-        },
-        {
-          "label": "fresh",
+          "relevance": "fix-path",
           "path": "sphinx/domains/cpp.py",
-          "excerpt": "class ASTExpression(ASTBase):",
-          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
         },
         {
           "label": "stale",
-          "path": "sphinx/domains/cpp.py",
+          "kind": "deleted",
           "excerpt": "class ASTGnuAttribute(ASTBase):",
-          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
         },
         {
           "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTParametersQualifiers(ASTBase):",
+          "relevance": "fix-path",
           "path": "sphinx/domains/cpp.py",
-          "excerpt": "class ASTLiteral(ASTExpression):",
-          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, args: List[ASTFunctionParameter],",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
         },
         {
           "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def _resolve_xref_inner(self, env: BuildEnvironment, fromdocname: str, builder: Builder,",
+          "relevance": "fix-path",
           "path": "sphinx/domains/cpp.py",
-          "excerpt": "class ASTPointerLiteral(ASTLiteral):",
-          "revision": "39cd463740d6ec955a5e216eb07d09a51204ecb4"
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def findWarning(e: Exception) -> Tuple[str, Exception]:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "parser = DefinitionParser(target, location=node,",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "parser2 = DefinitionParser(target[:-2],",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "txt_nne = str(nne)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "fa10309322c51871e4d91edb700b613fa33c420b",
+          "age_days": 33,
+          "age_commits": 311
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class _DuplicateSymbolError(Exception):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTAlignofExpr(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTAssignmentExpr(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class ASTBase:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTBinOpExpr(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class ASTDeclaratorMemPtr(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class ASTDeclaratorParamPack(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "data = self.last_match.group(2)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "decoded = data.encode().decode('unicode-escape')",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "def current_char(self):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "def eof(self):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "nextId = self.next.get_type_id(version, returnTypeId)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "prefix = self.last_match.group(1)  # may be None when no prefix",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "res = transform(self.next)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "self.value = ord(decoded)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "string = self._parse_string()",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 195,
+          "age_commits": 1507
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_operator_re = re.compile(r'''(?x)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class _DuplicateSymbolError(UnicodeMixin, Exception):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class ASTBase(UnicodeMixin):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTCPPAttribute(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTDeclaratorNameParamQual(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTIdentifier(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTInitializer(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTType(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTTypeWithInit(ASTBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "key = symbol.get_lookup_key()",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "type = self._parse_type(named=False, outer=\"operatorCast\")",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "type = self._parse_type(named=False)",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "5cd0f235a891de80b637c20e0d90fd916cc68a86",
+          "age_days": 1095,
+          "age_commits": 6421
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class _MockImporter(object):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc.py",
+          "revision": "3e2255cd64d96adbd53b3bd58d14019c6a2da0df",
+          "age_days": 1108,
+          "age_commits": 6565
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class _MockModule(ModuleType):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc.py",
+          "revision": "3e2255cd64d96adbd53b3bd58d14019c6a2da0df",
+          "age_days": 1108,
+          "age_commits": 6565
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class _MockObject(object):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc.py",
+          "revision": "3e2255cd64d96adbd53b3bd58d14019c6a2da0df",
+          "age_days": 1108,
+          "age_commits": 6565
+        },
+        {
+          "label": "stale",
+          "kind": "moved",
+          "excerpt": "class AttributeDocumenter(DocstringStripSignatureMixin, ClassLevelDocumenter):  # type: ignore",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc.py",
+          "revision": "3e2255cd64d96adbd53b3bd58d14019c6a2da0df",
+          "age_days": 1108,
+          "age_commits": 6565
+        },
+        {
+          "label": "stale",
+          "kind": "moved",
+          "excerpt": "class ClassLevelDocumenter(Documenter):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc.py",
+          "revision": "3e2255cd64d96adbd53b3bd58d14019c6a2da0df",
+          "age_days": 1108,
+          "age_commits": 6565
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class DocstringSignatureMixin(object):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc.py",
+          "revision": "3e2255cd64d96adbd53b3bd58d14019c6a2da0df",
+          "age_days": 1108,
+          "age_commits": 6565
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class Documenter(object):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc.py",
+          "revision": "3e2255cd64d96adbd53b3bd58d14019c6a2da0df",
+          "age_days": 1108,
+          "age_commits": 6565
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, directive, name, indent=u''):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc.py",
+          "revision": "3e2255cd64d96adbd53b3bd58d14019c6a2da0df",
+          "age_days": 1108,
+          "age_commits": 6565
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "cls = self.get_attr(member, '__class__', None)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "360efdefecfe7979dffe56905937592829eafa95",
+          "age_days": 31,
+          "age_commits": 304
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "cls_doc = self.get_attr(cls, '__doc__', None)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "360efdefecfe7979dffe56905937592829eafa95",
+          "age_days": 31,
+          "age_commits": 304
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "doc = getdoc(member, self.get_attr, self.env.config.autodoc_inherit_docstrings)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "360efdefecfe7979dffe56905937592829eafa95",
+          "age_days": 31,
+          "age_commits": 304
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "has_doc = bool(doc)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "360efdefecfe7979dffe56905937592829eafa95",
+          "age_days": 31,
+          "age_commits": 304
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "metadata = extract_metadata(doc)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "360efdefecfe7979dffe56905937592829eafa95",
+          "age_days": 31,
+          "age_commits": 304
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "meth = parent.object.__dict__.get(membername)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "360efdefecfe7979dffe56905937592829eafa95",
+          "age_days": 31,
+          "age_commits": 304
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "sig = inspect.signature(self.object, bound_method=False)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "360efdefecfe7979dffe56905937592829eafa95",
+          "age_days": 31,
+          "age_commits": 304
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "sig = inspect.signature(self.object, bound_method=True)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "360efdefecfe7979dffe56905937592829eafa95",
+          "age_days": 31,
+          "age_commits": 304
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "args = Signature(self.object, bound_method=False).format_args(**kwargs)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "args = Signature(self.object.__call__).format_args(**kwargs)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "args = super().format_args(**kwargs)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ClassDocumenter(DocstringSignatureMixin, ModuleLevelDocumenter):  # type: ignore",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class DecoratorDocumenter(FunctionDocumenter):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def add_directive_header(self, sig) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def autodoc_attrgetter(app: Sphinx, obj: Any, name: str, *defargs) -> Any:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def format_args(self, **kwargs):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def get_documenters(app: Sphinx) -> Dict[str, \"Type[Documenter]\"]:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def merge_autodoc_default_flags(app: Sphinx, config: Config) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "docstring = prepare_docstring(__slots__[name])",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "obj = self.parent.__dict__.get(self.object_name, self.object)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 293,
+          "age_commits": 1562
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "args = Signature(self.object, bound_method=False).format_args()",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "args = Signature(self.object.__call__).format_args()",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class DocstringSignatureMixin:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class Documenter:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class Options(dict):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __getattr__(self, name):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, directive, name, indent=''):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _find_signature(self, encoding=None):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def merge_autodoc_default_flags(app, config):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "match = py_ext_sig_re.match(doclines[0])",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "obj = self.parent.__dict__.get(self.object_name)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "1ea23e14df871ff97aa4082dddecfd11c4465cbe",
+          "age_days": 372,
+          "age_commits": 2005
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def assert_end(self) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/util/cfamily.py",
+          "revision": "1795cda56de3d641a050538a7f8e332136f3284b",
+          "age_days": 38,
+          "age_commits": 335
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def read_rest(self) -> str:",
+          "relevance": "fix-path",
+          "path": "sphinx/util/cfamily.py",
+          "revision": "1795cda56de3d641a050538a7f8e332136f3284b",
+          "age_days": 38,
+          "age_commits": 335
         }
       ]
     },
@@ -56,16 +1170,1114 @@
       "prompt_sha256": "f0c8a912cffb03b9d6346146e11cf044329280bfe2a193fd9e46980b193cffb0",
       "notes": [
         {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class AliasTransform(SphinxTransform):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0949735210abaa05b6448e531984f159403053f4",
+          "age_days": 36,
+          "age_commits": 229
+        },
+        {
           "label": "stale",
-          "path": "sphinx/ext/autodoc/importer.py",
-          "excerpt": "__mro__ = safe_getattr(obj, '__mro__', None)",
-          "revision": "bec552c3efa9ce452dea8549c517428fcb98f30d"
+          "kind": "edited",
+          "excerpt": "def copy(self: T) -> T:",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0949735210abaa05b6448e531984f159403053f4",
+          "age_days": 36,
+          "age_commits": 229
         },
         {
           "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def _add_enumerator_to_parent(self, ast: ASTDeclaration) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "54147083438039eabffe0bd2fe31be3187b299ce",
+          "age_days": 180,
+          "age_commits": 920
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _fill_empty(self, declaration: ASTDeclaration, docname: str) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "54147083438039eabffe0bd2fe31be3187b299ce",
+          "age_days": 180,
+          "age_commits": 920
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def add_declaration(self, declaration: ASTDeclaration, docname: str) -> \"Symbol\":",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "54147083438039eabffe0bd2fe31be3187b299ce",
+          "age_days": 180,
+          "age_commits": 920
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def apply(self, **kwargs: Any) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "54147083438039eabffe0bd2fe31be3187b299ce",
+          "age_days": 180,
+          "age_commits": 920
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "option_spec = dict(ObjectDescription.option_spec)",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "54147083438039eabffe0bd2fe31be3187b299ce",
+          "age_days": 180,
+          "age_commits": 920
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "res = self._add_symbols(nestedName, templateDecls,",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "54147083438039eabffe0bd2fe31be3187b299ce",
+          "age_days": 180,
+          "age_commits": 920
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "_float_literal_re = re.compile(r'''(?x)",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_fold_operator_re = re.compile(r'''(?x)",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_string_re = re.compile(r\"[LuU8]?('([^'\\\\]*(?:\\\\.[^'\\\\]*)*)'\"",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_visibility_re = re.compile(r'\\b(public|private|protected)\\b')",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class _DuplicateSymbolError(Exception):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTAlignofExpr(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTAssignmentExpr(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class ASTBase:",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTBinOpExpr(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class ASTDeclaratorMemPtr(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class ASTDeclaratorParamPack(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "decoded = data.encode().decode('unicode-escape')",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "def current_char(self):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "def eof(self):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "res = transform(self.next)",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "self.value = ord(decoded)",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "string = self._parse_string()",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "0b719faabb640bf620d62d947b51166715d2477e",
+          "age_days": 424,
+          "age_commits": 2784
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class _DuplicateSymbolError(UnicodeMixin, Exception):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class ASTBase(UnicodeMixin):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTCPPAttribute(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTDeclaratorNameParamQual(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class ASTGnuAttribute(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTIdentifier(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTInitializer(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTType(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ASTTypeWithInit(ASTBase):",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "type = self._parse_type(named=False, outer=\"operatorCast\")",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "type = self._parse_type(named=False)",
+          "relevance": "off-path",
+          "path": "sphinx/domains/cpp.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class AttributeDocumenter(DocstringStripSignatureMixin, ClassLevelDocumenter):  # type: ignore",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "class DataDeclarationDocumenter(DataDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class DataDocumenter(ModuleLevelDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class DecoratorDocumenter(FunctionDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class Documenter:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ExceptionDocumenter(ClassDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class GenericAliasDocumenter(DataDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "class InstanceAttributeDocumenter(AttributeDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ObjectMember(tuple):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class SingledispatchFunctionDocumenter(FunctionDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class SingledispatchMethodDocumenter(MethodDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, name: str, obj: Any, skipped: bool = False) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def __new__(cls, name: str, obj: Any, **kwargs: Any) -> Any:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def format_args(self, **kwargs: Any) -> Any:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def is_function_or_method(obj: Any) -> bool:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "self.parent = importlib.import_module(self.modname)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 32,
+          "age_commits": 168
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "args = super().format_args(**kwargs)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "6c3db6d65a3912fd9b21497fdcc63c9630132912",
+          "age_days": 186,
+          "age_commits": 948
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ClassLevelDocumenter(Documenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "6c3db6d65a3912fd9b21497fdcc63c9630132912",
+          "age_days": 186,
+          "age_commits": 948
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ModuleLevelDocumenter(Documenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "6c3db6d65a3912fd9b21497fdcc63c9630132912",
+          "age_days": 186,
+          "age_commits": 948
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def filter_members(self, members: List[Tuple[str, Any]], want_all: bool",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "6c3db6d65a3912fd9b21497fdcc63c9630132912",
+          "age_days": 186,
+          "age_commits": 948
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def is_filtered_inherited_member(name: str) -> bool:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "6c3db6d65a3912fd9b21497fdcc63c9630132912",
+          "age_days": 186,
+          "age_commits": 948
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "stripped = path.rstrip('.')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "6c3db6d65a3912fd9b21497fdcc63c9630132912",
+          "age_days": 186,
+          "age_commits": 948
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "__new__ = self.get_attr(self.object, '__new__', None)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "7c79a6b8d148264daadf98ae06d040c2463d4448",
+          "age_days": 382,
+          "age_commits": 2478
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "__slots__ = safe_getattr(self.parent, '__slots__', [])",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "7c79a6b8d148264daadf98ae06d040c2463d4448",
+          "age_days": 382,
+          "age_commits": 2478
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class SlotsAttributeDocumenter(AttributeDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "7c79a6b8d148264daadf98ae06d040c2463d4448",
+          "age_days": 382,
+          "age_commits": 2478
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "classname = safe_getattr(self.object, '__name__', None)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "7c79a6b8d148264daadf98ae06d040c2463d4448",
+          "age_days": 382,
+          "age_commits": 2478
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def add_directive_header(self, sig) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "7c79a6b8d148264daadf98ae06d040c2463d4448",
+          "age_days": 382,
+          "age_commits": 2478
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def get_documenters(app: Sphinx) -> Dict[str, \"Type[Documenter]\"]:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "7c79a6b8d148264daadf98ae06d040c2463d4448",
+          "age_days": 382,
+          "age_commits": 2478
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def setup(app: Sphinx) -> Dict[str, Any]:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "7c79a6b8d148264daadf98ae06d040c2463d4448",
+          "age_days": 382,
+          "age_commits": 2478
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "initdocstring = getdoc(__new__, self.get_attr,",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "7c79a6b8d148264daadf98ae06d040c2463d4448",
+          "age_days": 382,
+          "age_commits": 2478
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "obj = self.parent.__dict__.get(self.object_name, self.object)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "7c79a6b8d148264daadf98ae06d040c2463d4448",
+          "age_days": 382,
+          "age_commits": 2478
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class AutoDirective(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "109e01d94b7a9db338b4b0c5eea24aedffa7d245",
+          "age_days": 1096,
+          "age_commits": 6787
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class AutodocReporter(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "109e01d94b7a9db338b4b0c5eea24aedffa7d245",
+          "age_days": 1096,
+          "age_commits": 6787
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class DocstringSignatureMixin(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "109e01d94b7a9db338b4b0c5eea24aedffa7d245",
+          "age_days": 1096,
+          "age_commits": 6787
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "mod_cls = path.rstrip('.')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "109e01d94b7a9db338b4b0c5eea24aedffa7d245",
+          "age_days": 1096,
+          "age_commits": 6787
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "mod_cls = self.env.ref_context.get('py:class')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "109e01d94b7a9db338b4b0c5eea24aedffa7d245",
+          "age_days": 1096,
+          "age_commits": 6787
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "mod_cls = self.env.temp_data.get('autodoc:class')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "109e01d94b7a9db338b4b0c5eea24aedffa7d245",
+          "age_days": 1096,
+          "age_commits": 6787
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "obj = self.parent.__dict__.get(self.object_name)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "109e01d94b7a9db338b4b0c5eea24aedffa7d245",
+          "age_days": 1096,
+          "age_commits": 6787
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "SUPPRESS = object()",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "109e01d94b7a9db338b4b0c5eea24aedffa7d245",
+          "age_days": 1096,
+          "age_commits": 6787
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "__annotations__ = safe_getattr(obj, '__annotations__', None)",
+          "relevance": "fix-path",
           "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "11d0a7b75bf92dc67748a5ac69dd83cda1680b57",
+          "age_days": 33,
+          "age_commits": 180
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "__mro__ = safe_getattr(obj, '__mro__', None)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "11d0a7b75bf92dc67748a5ac69dd83cda1680b57",
+          "age_days": 33,
+          "age_commits": 180
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def _getannotations(obj: Any) -> Mapping[str, Any]:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "11d0a7b75bf92dc67748a5ac69dd83cda1680b57",
+          "age_days": 33,
+          "age_commits": 180
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
           "excerpt": "def _getmro(obj: Any) -> Tuple[\"Type\", ...]:",
-          "revision": "bec552c3efa9ce452dea8549c517428fcb98f30d"
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "11d0a7b75bf92dc67748a5ac69dd83cda1680b57",
+          "age_days": 33,
+          "age_commits": 180
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "module = import_module(modname, warningiserror=warningiserror)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "53c1dff91c0b7100e1ce1b51acbf0fffbc10cf9c",
+          "age_days": 186,
+          "age_commits": 962
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "obj = attrgetter(obj, attrname)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "53c1dff91c0b7100e1ce1b51acbf0fffbc10cf9c",
+          "age_days": 186,
+          "age_commits": 962
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "Attribute = namedtuple('Attribute', ['name', 'directly_defined', 'value'])",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "ecb1e763ad0917ac37061b648a53793a687cc760",
+          "age_days": 488,
+          "age_commits": 2805
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def get_object_members(subject: Any, objpath: List[str], attrgetter: Callable,",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "ecb1e763ad0917ac37061b648a53793a687cc760",
+          "age_days": 488,
+          "age_commits": 2805
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class _MockImporter(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "b6d6e4cc739a578a309f124791ed286058cdf0d6",
+          "age_days": 1099,
+          "age_commits": 6836
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class _MockModule(ModuleType):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "b6d6e4cc739a578a309f124791ed286058cdf0d6",
+          "age_days": 1099,
+          "age_commits": 6836
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class _MockObject(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "b6d6e4cc739a578a309f124791ed286058cdf0d6",
+          "age_days": 1099,
+          "age_commits": 6836
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def import_module(modname, warningiserror=False):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "b6d6e4cc739a578a309f124791ed286058cdf0d6",
+          "age_days": 1099,
+          "age_commits": 6836
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "logger = logging.getLogger(__name__)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/importer.py",
+          "revision": "b6d6e4cc739a578a309f124791ed286058cdf0d6",
+          "age_days": 1099,
+          "age_commits": 6836
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_directive_regex = re.compile(r'\\.\\. \\S+::')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "eb8f3b539a8be5a97eca02b1a8c5b51ca8a74463",
+          "age_days": 187,
+          "age_commits": 954
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_google_section_regex = re.compile(r'^(\\s|\\w)+:\\s*$')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "eb8f3b539a8be5a97eca02b1a8c5b51ca8a74463",
+          "age_days": 187,
+          "age_commits": 954
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "_google_typed_arg_regex = re.compile(r'\\s*(.+?)\\s*\\(\\s*(.*[^\\s]+)\\s*\\)')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "eb8f3b539a8be5a97eca02b1a8c5b51ca8a74463",
+          "age_days": 187,
+          "age_commits": 954
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "_name = match.group(1)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "eb8f3b539a8be5a97eca02b1a8c5b51ca8a74463",
+          "age_days": 187,
+          "age_commits": 954
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_numpy_section_regex = re.compile(r'^[=\\-`:\\'\"~^_*+#<>]{2,}\\s*$')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "eb8f3b539a8be5a97eca02b1a8c5b51ca8a74463",
+          "age_days": 187,
+          "age_commits": 954
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_type = match.group(2)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "eb8f3b539a8be5a97eca02b1a8c5b51ca8a74463",
+          "age_days": 187,
+          "age_commits": 954
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _consume_fields(self, parse_type: bool = True, prefer_type: bool = False",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "eb8f3b539a8be5a97eca02b1a8c5b51ca8a74463",
+          "age_days": 187,
+          "age_commits": 954
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "func_role = roles.get(self._what, '')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "eb8f3b539a8be5a97eca02b1a8c5b51ca8a74463",
+          "age_days": 187,
+          "age_commits": 954
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _parse_admonition(self, admonition, section):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 523,
+          "age_commits": 2839
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def _parse_attribute_docstring(self) -> List[str]:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 523,
+          "age_commits": 2839
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _parse_custom_generic_section(self, section):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 523,
+          "age_commits": 2839
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def _parse_usage_section(self, section: str) -> List[str]:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 523,
+          "age_commits": 2839
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "label = labels.get(section.lower(), section)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 523,
+          "age_commits": 2839
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "lines = self._consume_contiguous() + self._consume_empty()",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "0c48a28ad7216ee064b0db564745d749c049bfd5",
+          "age_days": 523,
+          "age_commits": 2839
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_bullet_list_regex = re.compile(r'^(\\*|\\+|\\-)(\\s+\\S|\\s*$)')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_enumerated_list_regex = re.compile(",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_single_colon_regex = re.compile(r'(?<!:):(?!:)')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class GoogleDocstring(UnicodeMixin):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def __unicode__(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _consume_contiguous(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _consume_empty(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_attribute_docstring(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_note_section(self, section):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "7cabd6cbb053965e1930b53c27d596fd1a52dd78",
+          "age_days": 1097,
+          "age_commits": 7247
         }
       ]
     },
@@ -78,39 +2290,563 @@
       "notes": [
         {
           "label": "stale",
-          "path": "sphinx/ext/autodoc/__init__.py",
-          "excerpt": "annotations = inspect.getannotations(parent)",
-          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
-        },
-        {
-          "label": "fresh",
-          "path": "sphinx/ext/autodoc/__init__.py",
-          "excerpt": "class UninitializedInstanceAttributeMixin(DataDocumenterMixinBase):",
-          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
-        },
-        {
-          "label": "fresh",
-          "path": "sphinx/ext/autodoc/__init__.py",
-          "excerpt": "def __init__(self):",
-          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
-        },
-        {
-          "label": "fresh",
-          "path": "sphinx/ext/autodoc/__init__.py",
-          "excerpt": "def filter_members(self, members: ObjectMembers, want_all: bool",
-          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
+          "kind": "deleted",
+          "excerpt": "def build_main(argv=sys.argv):",
+          "relevance": "off-path",
+          "path": "sphinx/__init__.py",
+          "revision": "6ad0ad6f1721bcf5f04765db9b1fdb315d9042b6",
+          "age_days": 1117,
+          "age_commits": 7289
         },
         {
           "label": "stale",
-          "path": "sphinx/ext/autodoc/__init__.py",
-          "excerpt": "def get_attribute_comment(self, parent: Any) -> Optional[List[str]]:",
-          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
+          "kind": "deleted",
+          "excerpt": "def main(*args, **kwargs):",
+          "relevance": "off-path",
+          "path": "sphinx/__init__.py",
+          "revision": "6ad0ad6f1721bcf5f04765db9b1fdb315d9042b6",
+          "age_days": 1117,
+          "age_commits": 7289
         },
         {
           "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def make_main(argv=sys.argv):",
+          "relevance": "off-path",
+          "path": "sphinx/__init__.py",
+          "revision": "6ad0ad6f1721bcf5f04765db9b1fdb315d9042b6",
+          "age_days": 1117,
+          "age_commits": 7289
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "package_dir = path.abspath(path.dirname(__file__))",
+          "relevance": "off-path",
+          "path": "sphinx/__init__.py",
+          "revision": "6ad0ad6f1721bcf5f04765db9b1fdb315d9042b6",
+          "age_days": 1117,
+          "age_commits": 7289
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "alias = stringify_typehint(self.object)",
+          "relevance": "fix-path",
           "path": "sphinx/ext/autodoc/__init__.py",
-          "excerpt": "def is_filtered_inherited_member(name: str) -> bool:",
-          "revision": "bac090cf40db31ddb74abb573fd3260af3d93734"
+          "revision": "4785f32ddf2508e85a3495c6447ff6415e8a2a29",
+          "age_days": 49,
+          "age_commits": 297
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class NewTypeMixin(DataDocumenterMixinBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "4785f32ddf2508e85a3495c6447ff6415e8a2a29",
+          "age_days": 49,
+          "age_commits": 297
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "has_doc = bool(doc)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "4785f32ddf2508e85a3495c6447ff6415e8a2a29",
+          "age_days": 49,
+          "age_commits": 297
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "metadata = extract_metadata(doc)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "4785f32ddf2508e85a3495c6447ff6415e8a2a29",
+          "age_days": 49,
+          "age_commits": 297
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class AttributeDocumenter(DocstringStripSignatureMixin, ClassLevelDocumenter):  # type: ignore",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class DataDeclarationDocumenter(DataDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class DataDocumenter(ModuleLevelDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class Documenter:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ExceptionDocumenter(ClassDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class GenericAliasDocumenter(DataDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class InstanceAttributeDocumenter(AttributeDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ObjectMember(tuple):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def __getattr__(self, name: str) -> Any:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, name: str, obj: Any, skipped: bool = False) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def __new__(cls, name: str, obj: Any, **kwargs: Any) -> Any:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def is_function_or_method(obj: Any) -> bool:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "44fbe9da7b13742d4ea14c15b5a3cd5fdeeade53",
+          "age_days": 181,
+          "age_commits": 1412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "args = super().format_args(**kwargs)",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "8076307ee196b072f6f1e5f38654e0b348b41177",
+          "age_days": 368,
+          "age_commits": 2426
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ClassLevelDocumenter(Documenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "8076307ee196b072f6f1e5f38654e0b348b41177",
+          "age_days": 368,
+          "age_commits": 2426
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class DecoratorDocumenter(FunctionDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "8076307ee196b072f6f1e5f38654e0b348b41177",
+          "age_days": 368,
+          "age_commits": 2426
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ModuleLevelDocumenter(Documenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "8076307ee196b072f6f1e5f38654e0b348b41177",
+          "age_days": 368,
+          "age_commits": 2426
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class SingledispatchFunctionDocumenter(FunctionDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "8076307ee196b072f6f1e5f38654e0b348b41177",
+          "age_days": 368,
+          "age_commits": 2426
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class SingledispatchMethodDocumenter(MethodDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "8076307ee196b072f6f1e5f38654e0b348b41177",
+          "age_days": 368,
+          "age_commits": 2426
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def add_line(self, line: str, source: str, *lineno: int) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "8076307ee196b072f6f1e5f38654e0b348b41177",
+          "age_days": 368,
+          "age_commits": 2426
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def documenters(self) -> Dict[str, \"Type[Documenter]\"]:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "8076307ee196b072f6f1e5f38654e0b348b41177",
+          "age_days": 368,
+          "age_commits": 2426
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def format_args(self, **kwargs: Any) -> Any:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "8076307ee196b072f6f1e5f38654e0b348b41177",
+          "age_days": 368,
+          "age_commits": 2426
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "stripped = path.rstrip('.')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "8076307ee196b072f6f1e5f38654e0b348b41177",
+          "age_days": 368,
+          "age_commits": 2426
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class AutodocRegistry(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "a41db7d2d06b1a398c25cca387203cc5af9ec850",
+          "age_days": 1102,
+          "age_commits": 6844
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class AutodocReporter(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "a41db7d2d06b1a398c25cca387203cc5af9ec850",
+          "age_days": 1102,
+          "age_commits": 6844
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class DeprecatedDict(dict):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "a41db7d2d06b1a398c25cca387203cc5af9ec850",
+          "age_days": 1102,
+          "age_commits": 6844
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class DocstringSignatureMixin(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "a41db7d2d06b1a398c25cca387203cc5af9ec850",
+          "age_days": 1102,
+          "age_commits": 6844
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "mod_cls = path.rstrip('.')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "a41db7d2d06b1a398c25cca387203cc5af9ec850",
+          "age_days": 1102,
+          "age_commits": 6844
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "mod_cls = self.env.ref_context.get('py:class')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "a41db7d2d06b1a398c25cca387203cc5af9ec850",
+          "age_days": 1102,
+          "age_commits": 6844
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "mod_cls = self.env.temp_data.get('autodoc:class')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "a41db7d2d06b1a398c25cca387203cc5af9ec850",
+          "age_days": 1102,
+          "age_commits": 6844
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "SUPPRESS = object()",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "a41db7d2d06b1a398c25cca387203cc5af9ec850",
+          "age_days": 1102,
+          "age_commits": 6844
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _qualify_name(self, attr_name: str, klass: \"Type\") -> str:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b718aef7d876ca6a9e08fc225f8f2031845083a4",
+          "age_days": 185,
+          "age_commits": 1294
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def _strip_empty(self, lines: List[str]) -> List[str]:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b718aef7d876ca6a9e08fc225f8f2031845083a4",
+          "age_days": 185,
+          "age_commits": 1294
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_directive_regex = re.compile(r'\\.\\. \\S+::')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "453fe55dc970ff64a3f9e0d82b29cebf21cc65f9",
+          "age_days": 381,
+          "age_commits": 2767
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_google_section_regex = re.compile(r'^(\\s|\\w)+:\\s*$')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "453fe55dc970ff64a3f9e0d82b29cebf21cc65f9",
+          "age_days": 381,
+          "age_commits": 2767
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "_google_typed_arg_regex = re.compile(r'\\s*(.+?)\\s*\\(\\s*(.*[^\\s]+)\\s*\\)')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "453fe55dc970ff64a3f9e0d82b29cebf21cc65f9",
+          "age_days": 381,
+          "age_commits": 2767
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_numpy_section_regex = re.compile(r'^[=\\-`:\\'\"~^_*+#<>]{2,}\\s*$')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "453fe55dc970ff64a3f9e0d82b29cebf21cc65f9",
+          "age_days": 381,
+          "age_commits": 2767
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_single_colon_regex = re.compile(r'(?<!:):(?!:)')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "453fe55dc970ff64a3f9e0d82b29cebf21cc65f9",
+          "age_days": 381,
+          "age_commits": 2767
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _consume_fields(self, parse_type: bool = True, prefer_type: bool = False",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "453fe55dc970ff64a3f9e0d82b29cebf21cc65f9",
+          "age_days": 381,
+          "age_commits": 2767
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "func_role = roles.get(self._what, '')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "453fe55dc970ff64a3f9e0d82b29cebf21cc65f9",
+          "age_days": 381,
+          "age_commits": 2767
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_bullet_list_regex = re.compile(r'^(\\*|\\+|\\-)(\\s+\\S|\\s*$)')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "70a622b86c753f8b2b4c197e7baf8bdc64a2afc3",
+          "age_days": 1160,
+          "age_commits": 7431
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_enumerated_list_regex = re.compile(",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "70a622b86c753f8b2b4c197e7baf8bdc64a2afc3",
+          "age_days": 1160,
+          "age_commits": 7431
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class GoogleDocstring(UnicodeMixin):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "70a622b86c753f8b2b4c197e7baf8bdc64a2afc3",
+          "age_days": 1160,
+          "age_commits": 7431
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def __unicode__(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "70a622b86c753f8b2b4c197e7baf8bdc64a2afc3",
+          "age_days": 1160,
+          "age_commits": 7431
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _consume_contiguous(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "70a622b86c753f8b2b4c197e7baf8bdc64a2afc3",
+          "age_days": 1160,
+          "age_commits": 7431
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _consume_empty(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "70a622b86c753f8b2b4c197e7baf8bdc64a2afc3",
+          "age_days": 1160,
+          "age_commits": 7431
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_attribute_docstring(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "70a622b86c753f8b2b4c197e7baf8bdc64a2afc3",
+          "age_days": 1160,
+          "age_commits": 7431
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_note_section(self, section):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "70a622b86c753f8b2b4c197e7baf8bdc64a2afc3",
+          "age_days": 1160,
+          "age_commits": 7431
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "lines = self._consume_contiguous() + self._consume_empty()",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "70a622b86c753f8b2b4c197e7baf8bdc64a2afc3",
+          "age_days": 1160,
+          "age_commits": 7431
         }
       ]
     },
@@ -122,16 +2858,1374 @@
       "prompt_sha256": "cc2eb5d4afca2da5e00ca423f2dce2bf467613a98b9686da7dc19a08e1f4de0f",
       "notes": [
         {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def anchors_ignore(self) -> List[Pattern]:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "ce305190c561bafc369aeb717f2646b3f4364af5",
+          "age_days": 34,
+          "age_commits": 438
+        },
+        {
           "label": "stale",
-          "path": "sphinx/ext/autodoc/__init__.py",
-          "excerpt": "annotations = get_type_hints(self.parent, None, self.config.autodoc_type_aliases)",
-          "revision": "b187ca0951cb270013e5b0cc361d6cecc1d4d616"
+          "kind": "edited",
+          "excerpt": "def process_result(self, result: Tuple[str, str, int, str, str, int]) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "ce305190c561bafc369aeb717f2646b3f4364af5",
+          "age_days": 34,
+          "age_commits": 438
         },
         {
           "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def wqueue(self, response: Response) -> Queue:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "ce305190c561bafc369aeb717f2646b3f4364af5",
+          "age_days": 34,
+          "age_commits": 438
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "filename = self.env.doc2path(docname, None)",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "ce305190c561bafc369aeb717f2646b3f4364af5",
+          "age_days": 34,
+          "age_commits": 438
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "linkstat = dict(filename=filename, lineno=lineno,",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "ce305190c561bafc369aeb717f2646b3f4364af5",
+          "age_days": 34,
+          "age_commits": 438
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "self._good: Set[str] = set()",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "ce305190c561bafc369aeb717f2646b3f4364af5",
+          "age_days": 34,
+          "age_commits": 438
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "self._rqueue: Queue = Queue()",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "ce305190c561bafc369aeb717f2646b3f4364af5",
+          "age_days": 34,
+          "age_commits": 438
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "self._wqueue: PriorityQueue[CheckRequestType] = PriorityQueue()",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "ce305190c561bafc369aeb717f2646b3f4364af5",
+          "age_days": 34,
+          "age_commits": 438
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "chunk = chunk.decode()      # manually try to decode it",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class CheckExternalLinksBuilder(Builder):",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def get_outdated_docs(self) -> Set[str]:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def get_target_uri(self, docname: str, typ: str = None) -> str:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def init(self) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def prepare_writing(self, docnames: Set[str]) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "epilog = __('Look for any errors in the above output or in '",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "found = check_anchor(response, unquote(anchor))",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "lineno = node_line_or_0(refnode)",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "parser = AnchorCheckParser(anchor)",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "response = requests.get(req_url, stream=True, config=self.app.config,",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "response = requests.head(req_url, allow_redirects=True,",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def check() -> Tuple[str, str, int]:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "a7725ad8ca03ede875945cf5aafedb96f84071e6",
+          "age_days": 409,
+          "age_commits": 2646
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "lineno = get_node_line(refnode)",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "a7725ad8ca03ede875945cf5aafedb96f84071e6",
+          "age_days": 409,
+          "age_commits": 2646
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "response = requests.head(req_url, config=self.app.config,",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "a7725ad8ca03ede875945cf5aafedb96f84071e6",
+          "age_days": 409,
+          "age_commits": 2646
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class AnchorCheckParser(html_parser.HTMLParser):",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "271e1d1340d669c890d6832f256304464702ff10",
+          "age_days": 1107,
+          "age_commits": 6886
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class HTMLParseError(Exception):  # type: ignore",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "271e1d1340d669c890d6832f256304464702ff10",
+          "age_days": 1107,
+          "age_commits": 6886
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, search_anchor):",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "271e1d1340d669c890d6832f256304464702ff10",
+          "age_days": 1107,
+          "age_commits": 6886
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def check_thread(self):",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "271e1d1340d669c890d6832f256304464702ff10",
+          "age_days": 1107,
+          "age_commits": 6886
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def finish(self):",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "271e1d1340d669c890d6832f256304464702ff10",
+          "age_days": 1107,
+          "age_commits": 6886
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "req_url = encode_uri(req_url)",
+          "relevance": "off-path",
+          "path": "sphinx/builders/linkcheck.py",
+          "revision": "271e1d1340d669c890d6832f256304464702ff10",
+          "age_days": 1107,
+          "age_commits": 6886
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class PyClassmember(PyObject):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "bad2444ed516f1a4454b6b735905cfc5f04abae9",
+          "age_days": 192,
+          "age_commits": 1475
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class PyModulelevel(PyObject):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "bad2444ed516f1a4454b6b735905cfc5f04abae9",
+          "age_days": 192,
+          "age_commits": 1475
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def builtin_resolver(app: Sphinx, env: BuildEnvironment,",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "bad2444ed516f1a4454b6b735905cfc5f04abae9",
+          "age_days": 192,
+          "age_commits": 1475
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def get_full_qualified_name(self, node: Element) -> str:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "bad2444ed516f1a4454b6b735905cfc5f04abae9",
+          "age_days": 192,
+          "age_commits": 1475
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def get_objects(self) -> Iterator[Tuple[str, str, str, str, str, int]]:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "bad2444ed516f1a4454b6b735905cfc5f04abae9",
+          "age_days": 192,
+          "age_commits": 1475
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def note_object(self, name: str, objtype: str, node_id: str, location: Any = None) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "bad2444ed516f1a4454b6b735905cfc5f04abae9",
+          "age_days": 192,
+          "age_commits": 1475
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def objects(self) -> Dict[str, ObjectEntry]:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "bad2444ed516f1a4454b6b735905cfc5f04abae9",
+          "age_days": 192,
+          "age_commits": 1475
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def type_to_xref(text: str, env: BuildEnvironment = None) -> addnodes.pending_xref:",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "bad2444ed516f1a4454b6b735905cfc5f04abae9",
+          "age_days": 192,
+          "age_commits": 1475
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "ModuleEntry = NamedTuple('ModuleEntry', [('docname', str),",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "bad2444ed516f1a4454b6b735905cfc5f04abae9",
+          "age_days": 192,
+          "age_commits": 1475
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "target = node.get('reftarget')",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "bad2444ed516f1a4454b6b735905cfc5f04abae9",
+          "age_days": 192,
+          "age_commits": 1475
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class PyObject(ObjectDescription):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "4410668776a364bfbcc17159e37d252a3d48f499",
+          "age_days": 371,
+          "age_commits": 2425
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class PyTypedField(PyXrefMixin, TypedField):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "4410668776a364bfbcc17159e37d252a3d48f499",
+          "age_days": 371,
+          "age_commits": 2425
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class PyClasslike(PyObject):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class PyCurrentModule(Directive):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class PyDecoratorFunction(PyDecoratorMixin, PyModulelevel):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class PyDecoratorMethod(PyDecoratorMixin, PyClassmember):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class PyDecoratorMixin(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class PyField(PyXrefMixin, Field):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class PyGroupedField(PyXrefMixin, GroupedField):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class PyModule(Directive):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class PyXRefRole(XRefRole):",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "dot = title.rfind('.')",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "target = target.lstrip('~')  # only has a meaning for the title",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "title = title.lstrip('.')    # only has a meaning for the target",
+          "relevance": "fix-path",
+          "path": "sphinx/domains/python.py",
+          "revision": "50188b570ac3649d65b1c96dcf70a6a032573039",
+          "age_days": 1095,
+          "age_commits": 7504
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "alias = stringify_typehint(self.object)",
+          "relevance": "fix-path",
           "path": "sphinx/ext/autodoc/__init__.py",
-          "excerpt": "def get_attribute_comment(self, parent: Any, attrname: str) -> Optional[List[str]]:",
-          "revision": "b187ca0951cb270013e5b0cc361d6cecc1d4d616"
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class DocstringSignatureMixin:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class GenericAliasMixin(DataDocumenterMixinBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class NewTypeMixin(DataDocumenterMixinBase):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def __init__(self):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _find_signature(self, encoding: str = None) -> Tuple[str, str]:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def add_line(self, line: str, source: str, *lineno: int) -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def autodoc_attrgetter(app: Sphinx, obj: Any, name: str, *defargs: Any) -> Any:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def documenters(self) -> Dict[str, \"Type[Documenter]\"]:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def get_attribute_comment(self, parent: Any) -> Optional[List[str]]:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def get_documenters(app: Sphinx) -> Dict[str, \"Type[Documenter]\"]:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def is_filtered_inherited_member(name: str) -> bool:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class AttributeDocumenter(DocstringStripSignatureMixin, ClassLevelDocumenter):  # type: ignore",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "09576ad064fd45fd95421f55d76cdaa8757ee3bc",
+          "age_days": 366,
+          "age_commits": 2396
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class DataDeclarationDocumenter(DataDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "09576ad064fd45fd95421f55d76cdaa8757ee3bc",
+          "age_days": 366,
+          "age_commits": 2396
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class DataDocumenter(ModuleLevelDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "09576ad064fd45fd95421f55d76cdaa8757ee3bc",
+          "age_days": 366,
+          "age_commits": 2396
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ExceptionDocumenter(ClassDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "09576ad064fd45fd95421f55d76cdaa8757ee3bc",
+          "age_days": 366,
+          "age_commits": 2396
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class GenericAliasDocumenter(DataDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "09576ad064fd45fd95421f55d76cdaa8757ee3bc",
+          "age_days": 366,
+          "age_commits": 2396
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class InstanceAttributeDocumenter(AttributeDocumenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "09576ad064fd45fd95421f55d76cdaa8757ee3bc",
+          "age_days": 366,
+          "age_commits": 2396
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class PropertyDocumenter(DocstringStripSignatureMixin, ClassLevelDocumenter):  # type: ignore",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "09576ad064fd45fd95421f55d76cdaa8757ee3bc",
+          "age_days": 366,
+          "age_commits": 2396
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def __init__(self, directive: \"DocumenterBridge\", name: str, indent: str = '') -> None:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "09576ad064fd45fd95421f55d76cdaa8757ee3bc",
+          "age_days": 366,
+          "age_commits": 2396
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def get_attr(self, obj: Any, name: str, *defargs: Any) -> Any:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "09576ad064fd45fd95421f55d76cdaa8757ee3bc",
+          "age_days": 366,
+          "age_commits": 2396
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def is_function_or_method(obj: Any) -> bool:",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "09576ad064fd45fd95421f55d76cdaa8757ee3bc",
+          "age_days": 366,
+          "age_commits": 2396
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class AutodocRegistry(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "d7a25433cefe09e5cec348a68e00dfe58054a53e",
+          "age_days": 1148,
+          "age_commits": 7583
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class AutodocReporter(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "d7a25433cefe09e5cec348a68e00dfe58054a53e",
+          "age_days": 1148,
+          "age_commits": 7583
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class ClassLevelDocumenter(Documenter):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "d7a25433cefe09e5cec348a68e00dfe58054a53e",
+          "age_days": 1148,
+          "age_commits": 7583
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class DeprecatedDict(dict):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "d7a25433cefe09e5cec348a68e00dfe58054a53e",
+          "age_days": 1148,
+          "age_commits": 7583
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class DocstringSignatureMixin(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "d7a25433cefe09e5cec348a68e00dfe58054a53e",
+          "age_days": 1148,
+          "age_commits": 7583
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "mod_cls = path.rstrip('.')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "d7a25433cefe09e5cec348a68e00dfe58054a53e",
+          "age_days": 1148,
+          "age_commits": 7583
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "mod_cls = self.env.ref_context.get('py:class')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "d7a25433cefe09e5cec348a68e00dfe58054a53e",
+          "age_days": 1148,
+          "age_commits": 7583
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "mod_cls = self.env.temp_data.get('autodoc:class')",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "d7a25433cefe09e5cec348a68e00dfe58054a53e",
+          "age_days": 1148,
+          "age_commits": 7583
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "SUPPRESS = object()",
+          "relevance": "fix-path",
+          "path": "sphinx/ext/autodoc/__init__.py",
+          "revision": "d7a25433cefe09e5cec348a68e00dfe58054a53e",
+          "age_days": 1148,
+          "age_commits": 7583
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _qualify_name(self, attr_name: str, klass: \"Type\") -> str:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def _strip_empty(self, lines: List[str]) -> List[str]:",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_directive_regex = re.compile(r'\\.\\. \\S+::')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_google_section_regex = re.compile(r'^(\\s|\\w)+:\\s*$')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "_google_typed_arg_regex = re.compile(r'\\s*(.+?)\\s*\\(\\s*(.*[^\\s]+)\\s*\\)')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_numpy_section_regex = re.compile(r'^[=\\-`:\\'\"~^_*+#<>]{2,}\\s*$')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_single_colon_regex = re.compile(r'(?<!:):(?!:)')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_xref_or_code_regex = re.compile(",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _consume_fields(self, parse_type: bool = True, prefer_type: bool = False",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def check_args(s):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def check_kwargs(s):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "func_role = roles.get(self._what, '')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "logger = logging.getLogger(__name__)",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "467533ffe87ec0aba9a17c8a567df555d9a448f7",
+          "age_days": 366,
+          "age_commits": 2562
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_bullet_list_regex = re.compile(r'^(\\*|\\+|\\-)(\\s+\\S|\\s*$)')",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b553c23ab1cadfe75db6637ca95daa11abc87049",
+          "age_days": 1107,
+          "age_commits": 7519
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "_enumerated_list_regex = re.compile(",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b553c23ab1cadfe75db6637ca95daa11abc87049",
+          "age_days": 1107,
+          "age_commits": 7519
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "class GoogleDocstring(UnicodeMixin):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b553c23ab1cadfe75db6637ca95daa11abc87049",
+          "age_days": 1107,
+          "age_commits": 7519
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def __unicode__(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b553c23ab1cadfe75db6637ca95daa11abc87049",
+          "age_days": 1107,
+          "age_commits": 7519
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _consume_contiguous(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b553c23ab1cadfe75db6637ca95daa11abc87049",
+          "age_days": 1107,
+          "age_commits": 7519
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def _consume_empty(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b553c23ab1cadfe75db6637ca95daa11abc87049",
+          "age_days": 1107,
+          "age_commits": 7519
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_attribute_docstring(self):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b553c23ab1cadfe75db6637ca95daa11abc87049",
+          "age_days": 1107,
+          "age_commits": 7519
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _parse_note_section(self, section):",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b553c23ab1cadfe75db6637ca95daa11abc87049",
+          "age_days": 1107,
+          "age_commits": 7519
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "lines = self._consume_contiguous() + self._consume_empty()",
+          "relevance": "off-path",
+          "path": "sphinx/ext/napoleon/docstring.py",
+          "revision": "b553c23ab1cadfe75db6637ca95daa11abc87049",
+          "age_days": 1107,
+          "age_commits": 7519
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "annotation = ast_unparse(args.kwarg.annotation, code) or Parameter.empty",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "annotation = ast_unparse(args.vararg.annotation, code) or Parameter.empty",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "annotations = typing.get_type_hints(subject, None, type_aliases)",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class Signature:",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def __init__(self, subject: Callable, bound_method: bool = False,",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def format_annotation_new(self, annotation: Any) -> str:",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def getdoc(obj: Any, attrgetter: Callable = safe_getattr,",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "default = ast_unparse(args.kw_defaults[i], code) or Parameter.empty",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "default = ast_unparse(defaults[i + posonlyargs], code)",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "default = ast_unparse(defaults[i], code)",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "positionals = len(args.args)",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "return_annotation = ast_unparse(node.returns, code) or Parameter.empty",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "f9968594206e538f13fa1c27c065027f10d4ea27",
+          "age_days": 195,
+          "age_commits": 1558
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "annotation = ast_unparse(args.kwarg.annotation) or Parameter.empty",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "17a5a29f1eeb89f35a430ac50597d0f82e8b45a9",
+          "age_days": 368,
+          "age_commits": 2412
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def signature_from_ast(node: ast.FunctionDef) -> inspect.Signature:",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "17a5a29f1eeb89f35a430ac50597d0f82e8b45a9",
+          "age_days": 368,
+          "age_commits": 2412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def signature_from_str(signature: str) -> inspect.Signature:",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "17a5a29f1eeb89f35a430ac50597d0f82e8b45a9",
+          "age_days": 368,
+          "age_commits": 2412
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def signature(subject: Callable, bound_method: bool = False, follow_wrapped: bool = False",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "17a5a29f1eeb89f35a430ac50597d0f82e8b45a9",
+          "age_days": 368,
+          "age_commits": 2412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "defaults = list(args.defaults)",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "17a5a29f1eeb89f35a430ac50597d0f82e8b45a9",
+          "age_days": 368,
+          "age_commits": 2412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "function = cast(ast.FunctionDef, module.body[0])  # type: ignore",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "17a5a29f1eeb89f35a430ac50597d0f82e8b45a9",
+          "age_days": 368,
+          "age_commits": 2412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "posonlyargs = len(args.posonlyargs)  # type: ignore",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "17a5a29f1eeb89f35a430ac50597d0f82e8b45a9",
+          "age_days": 368,
+          "age_commits": 2412
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "arg = StringIO()",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class Parameter(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class Signature(object):",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, name, kind=POSITIONAL_OR_KEYWORD, default=empty):",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, subject, bound_method=False, has_retval=True):",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def _findclass(func):",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def is_builtin_class_method(obj, attr_name):",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "memory_address_re = re.compile(r' at 0x[0-9a-f]{8,16}(?=>)', re.IGNORECASE)",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "s = memory_address_re.sub('', s)",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "s = repr(object)",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "sig = inspect.signature(func)",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "sorted_keys = sorted(object)",
+          "relevance": "fix-path",
+          "path": "sphinx/util/inspect.py",
+          "revision": "62dbe448581074fde23e89c9b5d459f544975685",
+          "age_days": 1095,
+          "age_commits": 7505
         }
       ]
     },
@@ -144,39 +4238,413 @@
       "notes": [
         {
           "label": "fresh",
-          "path": "sphinx/directives/other.py",
-          "excerpt": "class Centered(SphinxDirective):",
-          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
-        },
-        {
-          "label": "fresh",
-          "path": "sphinx/directives/other.py",
-          "excerpt": "class Include(BaseInclude, SphinxDirective):",
-          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
-        },
-        {
-          "label": "fresh",
-          "path": "sphinx/directives/other.py",
-          "excerpt": "class TabularColumns(SphinxDirective):",
-          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
+          "kind": "unchanged",
+          "excerpt": "package_dir = path.abspath(path.dirname(__file__))",
+          "relevance": "off-path",
+          "path": "sphinx/__init__.py",
+          "revision": "d48cc783b6e48b99cbbcf5462f44c59a4ed78e6a",
+          "age_days": 93,
+          "age_commits": 187
         },
         {
           "label": "stale",
+          "kind": "deleted",
+          "excerpt": "ret = subprocess.run(['git', 'show', '-s', '--pretty=format:%h'],",
+          "relevance": "off-path",
+          "path": "sphinx/__init__.py",
+          "revision": "cd17b277f461fb585fa80600a0022c7323419897",
+          "age_days": 383,
+          "age_commits": 778
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class JavaScript(str):",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class Stylesheet(str):",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "ctx = self.globalcontext.copy()",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __eq__(self, other: BuildInfo) -> bool:  # type: ignore",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, app: Sphinx, env: BuildEnvironment = None) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def __new__(cls, filename: str, *args: str, priority: int = 500, **attributes: Any,",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def dump(self, f: IO) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def get_target_uri(self, docname: str, typ: str = None) -> str:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def handle_page(self, pagename: str, addctx: dict, templatename: str = 'page.html',",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "default_baseuri = self.get_target_uri(pagename)",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "self.config_hash = get_stable_hash(values)",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "self.tags_hash = get_stable_hash(sorted(tags))",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "ae206694e68bea074aca633ea0d32e9ed882a95f",
+          "age_days": 95,
+          "age_commits": 187
+        },
+        {
+          "label": "stale",
+          "kind": "renamed",
+          "excerpt": "def deprecate_html_4(_app: Sphinx, config: Config) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "2a7c40d07f4b0e0fd2a4bc942e74634c2df24dee",
+          "age_days": 215,
+          "age_commits": 441
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def validate_html_favicon(app: Sphinx, config: Config) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "2a7c40d07f4b0e0fd2a4bc942e74634c2df24dee",
+          "age_days": 215,
+          "age_commits": 441
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "build_info = BuildInfo()",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "63edba0388b9d779d545354a1e7c4ec8552cdfa5",
+          "age_days": 384,
+          "age_commits": 770
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "class _stable_repr_object():",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "63edba0388b9d779d545354a1e7c4ec8552cdfa5",
+          "age_days": 384,
+          "age_commits": 770
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __eq__(self, other: \"BuildInfo\") -> bool:  # type: ignore",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "63edba0388b9d779d545354a1e7c4ec8552cdfa5",
+          "age_days": 384,
+          "age_commits": 770
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, config: Config = None, tags: Tags = None, config_categories: List[str] = []) -> None:  # NOQA",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "63edba0388b9d779d545354a1e7c4ec8552cdfa5",
+          "age_days": 384,
+          "age_commits": 770
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "reader = docutils.readers.doctree.Reader(parser_name='restructuredtext')",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "63edba0388b9d779d545354a1e7c4ec8552cdfa5",
+          "age_days": 384,
+          "age_commits": 770
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "class BuildInfo:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "1bca9f9587cfdfc82293c4c83679c6e3a03b5c3f",
+          "age_days": 1095,
+          "age_commits": 4517
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "def __init__(self, app: Sphinx) -> None:",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "1bca9f9587cfdfc82293c4c83679c6e3a03b5c3f",
+          "age_days": 1095,
+          "age_commits": 4517
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "def __new__(cls, filename: str, **attributes: str) -> \"JavaScript\":",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "1bca9f9587cfdfc82293c4c83679c6e3a03b5c3f",
+          "age_days": 1095,
+          "age_commits": 4517
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "obj = sorted(get_stable_hash(o) for o in obj)",
+          "relevance": "off-path",
+          "path": "sphinx/builders/html/__init__.py",
+          "revision": "1bca9f9587cfdfc82293c4c83679c6e3a03b5c3f",
+          "age_days": 1095,
+          "age_commits": 4517
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "all_docnames = self.env.found_docs.copy() | generated_docnames",
+          "relevance": "fix-path",
           "path": "sphinx/directives/other.py",
+          "revision": "6c569889791c1abae6202a9c10ee4c5c8a6745ea",
+          "age_days": 177,
+          "age_commits": 380
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "def parse_content(self, toctree: addnodes.toctree) -> list[Node]:",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "6c569889791c1abae6202a9c10ee4c5c8a6745ea",
+          "age_days": 177,
+          "age_commits": 380
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "docname = docname_join(self.env.docname, docname)",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "6c569889791c1abae6202a9c10ee4c5c8a6745ea",
+          "age_days": 177,
+          "age_commits": 380
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "docnames = sorted(patfilter(all_docnames, patname))",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "6c569889791c1abae6202a9c10ee4c5c8a6745ea",
+          "age_days": 177,
+          "age_commits": 380
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "explicit = explicit_title_re.match(entry)",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "6c569889791c1abae6202a9c10ee4c5c8a6745ea",
+          "age_days": 177,
+          "age_commits": 380
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
+          "excerpt": "generated_docnames = frozenset(self.env.domains['std']._virtual_doc_names)",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "6c569889791c1abae6202a9c10ee4c5c8a6745ea",
+          "age_days": 177,
+          "age_commits": 380
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "message = __('toctree contains reference to excluded document %r')",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "6c569889791c1abae6202a9c10ee4c5c8a6745ea",
+          "age_days": 177,
+          "age_commits": 380
+        },
+        {
+          "label": "stale",
+          "kind": "deleted",
+          "excerpt": "patname = docname_join(self.env.docname, entry)",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "6c569889791c1abae6202a9c10ee4c5c8a6745ea",
+          "age_days": 177,
+          "age_commits": 380
+        },
+        {
+          "label": "stale",
+          "kind": "edited",
           "excerpt": "def parse_content(self, toctree: addnodes.toctree) -> List[Node]:",
-          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "e3337c78c614bffef3b57eb9dc170aaf33c80612",
+          "age_days": 386,
+          "age_commits": 784
         },
         {
           "label": "stale",
-          "path": "sphinx/directives/other.py",
-          "excerpt": "def run(self) -> List[Node]:",
-          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
-        },
-        {
-          "label": "stale",
-          "path": "sphinx/directives/other.py",
+          "kind": "edited",
           "excerpt": "def setup(app: \"Sphinx\") -> Dict[str, Any]:",
-          "revision": "f4c8a0a68e0013808d169357c9f77ebdf19d0f4e"
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "e3337c78c614bffef3b57eb9dc170aaf33c80612",
+          "age_days": 386,
+          "age_commits": 784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "excluded = Matcher(self.config.exclude_patterns)",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "e3337c78c614bffef3b57eb9dc170aaf33c80612",
+          "age_days": 386,
+          "age_commits": 784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "message = __('toctree contains reference to nonexisting document %r')",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "e3337c78c614bffef3b57eb9dc170aaf33c80612",
+          "age_days": 386,
+          "age_commits": 784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "ret = self.parse_content(subnode)",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "e3337c78c614bffef3b57eb9dc170aaf33c80612",
+          "age_days": 386,
+          "age_commits": 784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "wrappernode = nodes.compound(classes=['toctree-wrapper'])",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "e3337c78c614bffef3b57eb9dc170aaf33c80612",
+          "age_days": 386,
+          "age_commits": 784
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "ref = explicit.group(2)",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "00002397764b391b0ebf737bbe47202ed4c98fff",
+          "age_days": 1123,
+          "age_commits": 4788
+        },
+        {
+          "label": "fresh",
+          "kind": "unchanged",
+          "excerpt": "title = explicit.group(1)",
+          "relevance": "fix-path",
+          "path": "sphinx/directives/other.py",
+          "revision": "00002397764b391b0ebf737bbe47202ed4c98fff",
+          "age_days": 1123,
+          "age_commits": 4788
         }
       ]
     }

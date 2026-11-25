@@ -1,21 +1,27 @@
 import assert from "node:assert/strict";
 import { mkdirSync } from "node:fs";
 import { resolve } from "node:path";
-import { git, labels, worktree, type Case, type Label } from "./cases.ts";
+import { git, labels, relevances, worktree, type Case } from "./cases.ts";
 import { command } from "./command.ts";
+import { kindNames } from "./staleness/index.ts";
 
 export const recallCharLimit = 6000;
 const adapterTimeoutMs = 120_000;
 
-export type Exposure = { case: string; arm: string; shown: Record<Label, number>; total: Record<Label, number>; shownNotes: string[] };
+type Tally = { shown: number; total: number };
+// Keys: `stale`, `fresh`, then stale breakdowns `kind:<kind>` and `relevance:<relevance>`.
+export type Exposure = { case: string; arm: string; counts: Record<string, Tally>; shownNotes: string[] };
 type Step = "ingest" | "recall";
 
-// Ingests each note at the revision it was observed, then recalls at the task's base revision.
+const breakdownKeys = [...labels, ...kindNames.map(kind => `kind:${kind}`), ...relevances.map(relevance => `relevance:${relevance}`)];
+
+// Ingests notes oldest revision first, each at the revision it was observed, then recalls at the task's base revision.
 export function recallFor(adapter: string, item: Case, prompt: string, stateRoot: string): string {
     const state = resolve(stateRoot, item.id);
     mkdirSync(state, { recursive: true });
-    const revisions = [...new Set(item.notes.map(note => note.revision))];
-    const checkoutDir = worktree(revisions[0]);
+    const oldestFirst = [...item.notes].sort((left, right) => right.age_days - left.age_days);
+    const revisions = [...new Set(oldestFirst.map(note => note.revision))];
+    const checkoutDir = worktree(item.base);
     try {
         for (const revision of revisions) {
             git(["checkout", "--quiet", "--detach", revision], checkoutDir);
@@ -33,25 +39,29 @@ export function recallFor(adapter: string, item: Case, prompt: string, stateRoot
 
 // A note counts as shown when its excerpt appears verbatim anywhere in the recall text.
 export function exposure(item: Case, arm: string, recall: string): Exposure {
-    const shown = { stale: 0, fresh: 0 };
-    const total = { stale: 0, fresh: 0 };
+    const counts: Record<string, Tally> = Object.fromEntries(breakdownKeys.map(key => [key, { shown: 0, total: 0 }]));
     const shownNotes: string[] = [];
     for (const note of item.notes) {
-        total[note.label]++;
-        if (!recall.includes(note.excerpt)) continue;
-        shown[note.label]++;
-        shownNotes.push(`${note.label} ${note.path}: ${note.excerpt}`);
+        const shown = recall.includes(note.excerpt);
+        const keys = note.label === "stale" ? ["stale", `kind:${note.kind}`, `relevance:${note.relevance}`] : ["fresh"];
+        for (const key of keys) {
+            counts[key].total++;
+            if (shown) counts[key].shown++;
+        }
+        if (shown) shownNotes.push(`${note.label} ${note.kind} ${note.path}: ${note.excerpt}`);
     }
-    return { case: item.id, arm, shown, total, shownNotes };
+    return { case: item.id, arm, counts, shownNotes };
 }
 
+// Columns with no notes in the selection are dropped.
 export function formatExposure(rows: Exposure[]): string {
     const arms = [...new Set(rows.map(row => row.arm))];
-    const lines = ["| Arm | Stale notes shown | Fresh notes shown |", "| --- | --- | --- |"];
+    const total = (own: Exposure[], key: string, field: keyof Tally) => own.reduce((sum, row) => sum + row.counts[key][field], 0);
+    const keys = breakdownKeys.filter(key => total(rows, key, "total") > 0);
+    const lines = [`| Arm | ${keys.join(" | ")} |`, `| --- |${" --- |".repeat(keys.length)}`];
     for (const arm of arms) {
         const own = rows.filter(row => row.arm === arm);
-        const cells = labels.map(label => `${own.reduce((total, row) => total + row.shown[label], 0)}/${own.reduce((total, row) => total + row.total[label], 0)}`);
-        lines.push(`| ${arm} | ${cells.join(" | ")} |`);
+        lines.push(`| ${arm} | ${keys.map(key => `${total(own, key, "shown")}/${total(own, key, "total")}`).join(" | ")} |`);
     }
     return lines.join("\n");
 }
@@ -60,4 +70,3 @@ function run(adapter: string, step: Step, input: object, cwd: string, state: str
     const env = { ...process.env, STALE_RECALL_STATE: state, STALE_RECALL_REVISION: revision };
     return command([adapter, step], { cwd, env, input: JSON.stringify(input), timeout: adapterTimeoutMs });
 }
-

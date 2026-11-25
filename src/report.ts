@@ -2,29 +2,44 @@
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { cases, type Case } from "./cases.ts";
+import { cases, root, sha256, type Case } from "./cases.ts";
+import { selectNotes, type Selection } from "./select.ts";
+import { symbol } from "./staleness/lines.ts";
 
-type Exposure = { event: "exposure"; case: string; arm: string; shown: { stale: number } };
+type Exposure = { event: "exposure"; case: string; arm: string; counts: { stale: { shown: number } } };
 type Session = { event: "session"; case: string; arm: string; key: string; input: number; cacheRead: number; cacheWrite: number; toolCalls: number };
+type Manifest = { selection: Selection; harness: Record<string, string> };
 export type Cell = { run: string; case: string; arm: string; resolved: boolean; staleShown: number; staleCommands: number; inputTokens: number; toolCalls: number };
 
 if (import.meta.main) {
     const runs = Bun.argv.slice(2);
     assert(runs.length, "usage: bun src/report.ts <run dir>...");
+    const selections = new Set(runs.map(run => JSON.stringify(manifestOf(run).selection)));
+    assert.equal(selections.size, 1, "Runs used different note selections; report them separately");
     console.log(formatReport(runs.flatMap(load)));
 }
 
+function manifestOf(runDir: string): Manifest {
+    const manifest: Manifest = JSON.parse(readFileSync(resolve(runDir, "manifest.json"), "utf8"));
+    // JSON turns an unlimited dose or age into null.
+    manifest.selection.stale ??= Number.POSITIVE_INFINITY;
+    manifest.selection.maxAgeDays ??= Number.POSITIVE_INFINITY;
+    assert.equal(manifest.harness["cases.json"], sha256(readFileSync(resolve(root, "cases.json"), "utf8")), `${runDir} ran on a different cases.json`);
+    return manifest;
+}
+
 function load(runDir: string): Cell[] {
+    const { selection } = manifestOf(runDir);
     const rows = readFileSync(resolve(runDir, "metrics.jsonl"), "utf8").trim().split("\n").map(line => JSON.parse(line) as Exposure | Session);
     const sessions = rows.filter((row): row is Session => row.event === "session");
     return sessions.map(row => {
-        const item = cases.find(entry => entry.id === row.case)!;
+        const item = selectNotes(cases.find(entry => entry.id === row.case)!, selection);
         const gradePath = resolve(runDir, `${row.key}.grade.json`);
         assert(existsSync(gradePath), `Ungraded: ${gradePath}; run scripts/grade.sh first`);
         const grade: { resolved_ids: string[] } = JSON.parse(readFileSync(gradePath, "utf8"));
         const shown = rows.find((entry): entry is Exposure => entry.event === "exposure" && entry.case === row.case && entry.arm === row.arm);
         return {
-            run: runDir, case: row.case, arm: row.arm, resolved: grade.resolved_ids.includes(row.case), staleShown: shown?.shown.stale ?? 0,
+            run: runDir, case: row.case, arm: row.arm, resolved: grade.resolved_ids.includes(row.case), staleShown: shown?.counts.stale.shown ?? 0,
             staleCommands: staleCommands(item, resolve(runDir, `${row.key}.events.jsonl`)), inputTokens: row.input + row.cacheRead + row.cacheWrite, toolCalls: row.toolCalls,
         };
     });
@@ -35,12 +50,6 @@ function staleCommands(item: Case, eventsPath: string): number {
     const symbols = item.notes.filter(note => note.label === "stale").map(note => symbol(note.excerpt)).filter(Boolean);
     const events: { type?: string; args?: { command?: string } }[] = readFileSync(eventsPath, "utf8").split("\n").filter(line => line.startsWith("{")).map(line => JSON.parse(line));
     return events.filter(event => event.type === "tool_execution_start" && symbols.some(name => event.args?.command?.includes(name))).length;
-}
-
-// The first identifier in the excerpt: a class/def name, or the assigned name.
-function symbol(excerpt: string): string {
-    const match = /^\s*(?:async\s+def|class|def)\s+([A-Za-z_]\w*)|^\s*([A-Za-z_][\w.]*)/.exec(excerpt);
-    return match?.[1] ?? match?.[2] ?? "";
 }
 
 export function formatReport(cells: Cell[]): string {

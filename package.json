@@ -9,6 +9,7 @@
     "agent": "bun src/agent.ts",
     "report": "bun src/report.ts",
     "verify-cases": "bun src/verify-cases.ts",
+    "generate": "bun src/generate.ts",
     "test": "bun test",
     "typecheck": "tsc"
   },

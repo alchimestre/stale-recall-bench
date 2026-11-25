@@ -12,18 +12,55 @@ A benchmark for coding-agent memory: it feeds your memory system notes that were
 
 ## Cases
 
-Five sphinx tasks from SWE-bench Verified (`7590`, `8548`, `9229`, `9461`, `11510`), in upstream `created_at` order, pinned in `cases.json`.
+Five sphinx tasks from SWE-bench Verified (`7590`, `8548`, `9229`, `9461`, `11510`), in upstream `created_at` order, pinned in `cases.json` with a pool of 235 stale and 225 fresh notes.
 
-| Note label | Count | Definition |
+Each note is a landmark line (`def`, `async def`, `class`, assignment from a call) read from a file at an old revision. A `stale` note is gone from that path at the task base; a `fresh` note sits once in the same file at both revisions, nearest to the stale lines.
+
+| Field | Values | Meaning |
 | --- | --- | --- |
-| `stale` | 11 | A line removed by the last commit before the base that touched a gold-patch hunk region. Present at that commit's parent, absent from the base file and from the gold patch's added lines. Landmark lines only (`def`, `async def`, `class`, assignment from a call), up to 3 per task |
-| `fresh` | 11 | A `def`/`class` line from the same file and revision, unique in the file at both revisions, nearest to the stale lines. One per stale note |
+| `kind` | `renamed` (11), `edited` (109), `deleted` (113), `moved` (2); fresh notes are `unchanged` | How the line went stale, from the diff hunk that removed it |
+| `relevance` | `fix-path` (123 stale), `off-path` (112 stale) | Fix path: a file the gold patch edits. Off path: one of the 2 most-committed other source files in the year before base |
+| `age_days`, `age_commits` | 31 to 1,160 days | Age of the note's revision at the task base; revisions target 30, 180, 365 and 1,095 days |
 
-Both labels are observed at the same old revision; only the code under them moved.
+| Kind | Rule |
+| --- | --- |
+| `moved` | File path changed and the line is still in the new file |
+| `renamed` | A hunk replaces the line with one that differs only in its symbol, and the old name is gone |
+| `edited` | A hunk replaces the line with one of the same landmark type and symbol |
+| `deleted` | Fallback: the line is gone from the new file |
+
+No excerpt overlaps the gold patch's added lines or another note's excerpt.
 
 ```sh
 bun run verify-cases
 ```
+
+### Select notes
+
+`exposure` and `agent` take the same flags; the agent tier records them in `manifest.json`.
+
+| Flag | Default | Effect |
+| --- | --- | --- |
+| `--kinds` | all four | Comma list of stale kinds |
+| `--relevance` | `fix-path,off-path` | Comma list; applies to stale and fresh notes |
+| `--min-age-days`, `--max-age-days` | `0`, `Infinity` | Age range; applies to stale and fresh notes |
+| `--stale` | `3` | Stale notes per case: a number or `all` |
+| `--fresh` | `match` | Fresh notes per case: a number, `all`, or `match` (same count as stale) |
+| `--seed` | `0` | Picks which notes fill the dose; same flags pick the same notes |
+
+```sh
+bun run exposure --kinds edited,renamed --relevance fix-path --stale all adapters/flat.ts
+```
+
+### Add a staleness kind
+
+1. Write `src/staleness/<kind>.ts` exporting a `StalenessKind` with `matches(change, line)`.
+2. Register it in `kinds` in `src/staleness/index.ts`; the first match wins and `deleted` stays last.
+3. Regenerate and recheck the pool.
+
+   ```sh
+   bun run generate && bun run verify-cases
+   ```
 
 ## Adapter protocol
 
@@ -57,10 +94,10 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
    bun run exposure adapters/flat.ts path/to/your-adapter
    ```
 
-   | Arm | Stale notes shown | Fresh notes shown |
-   | --- | --- | --- |
-   | flat | 11/11 | 11/11 |
-   | ideal | 0/11 | 11/11 |
+   | Arm | stale | fresh | kind:renamed | kind:edited | kind:deleted | relevance:fix-path | relevance:off-path |
+   | --- | --- | --- | --- | --- | --- | --- | --- |
+   | flat | 15/15 | 15/15 | 1/1 | 7/7 | 7/7 | 6/6 | 9/9 |
+   | ideal | 0/15 | 15/15 | 0/1 | 0/7 | 0/7 | 0/6 | 0/9 |
 
 3. Agent tier: one [OMP](https://github.com/can1357/oh-my-pi) session per case and arm in an offline AMD64 SWE-bench container. Arm `none` gets no recall; each adapter adds one arm. Requires Docker, `omp`, `uv`, `jq`, credentials for the model, and the images listed in `cases.json`.
 
@@ -75,7 +112,7 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
    scripts/grade.sh 3 runs/opus-1
    ```
 
-5. Report: resolution per case and arm, stale notes shown, shell commands naming a stale note's symbol, tokens, tool calls, and a two-sided sign test per arm pair. Pass several run dirs to pool replicates.
+5. Report: resolution per case and arm, stale notes shown, shell commands naming a stale note's symbol, tokens, tool calls, and a two-sided sign test per arm pair. Pass several run dirs with the same selection to pool replicates.
 
    ```sh
    bun run report runs/opus-1 runs/opus-2 runs/opus-3
@@ -87,7 +124,10 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
 - Never pool runs from different models.
 - Agent-tier sessions get one tool, a shell inside the task container, with no network and a single-commit history.
 - Exposure matching is verbatim; a system that paraphrases notes scores as showing none of them.
-- Stale notes for `11510` differ from the base only by `List` → `list` annotations.
+- Sphinx has almost no `moved` notes (2); `--kinds moved` leaves most cases empty.
+- Kind rules are line heuristics on `git diff --unified=0` hunks; a rewrite split across hunks counts as `deleted`.
+- Age buckets are targets: each revision is the newest commit to the file at or before its target date.
+- Regenerating the pool invalidates earlier runs; `report` refuses runs made on a different `cases.json`.
 
 ## License
 
