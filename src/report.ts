@@ -9,7 +9,7 @@ import { symbol } from "./staleness/lines.ts";
 type Exposure = { event: "exposure"; case: string; arm: string; counts: { stale: { shown: number } } };
 type Session = { event: "session"; case: string; arm: string; key: string; input: number; cacheRead: number; cacheWrite: number; toolCalls: number };
 type Manifest = { selection: Selection; harness: Record<string, string> };
-export type Cell = { run: string; case: string; arm: string; resolved: boolean; staleShown: number; staleCommands: number; inputTokens: number; toolCalls: number };
+export type Cell = { run: string; case: string; arm: string; resolved: boolean; staleShown: number; staleSymbols: number; staleCommands: number; inputTokens: number; toolCalls: number };
 
 const minEvidenceSymbolLength = 6;
 
@@ -43,7 +43,7 @@ function load(runDir: string): Cell[] {
         const shown = rows.find((entry): entry is Exposure => entry.event === "exposure" && entry.case === row.case && entry.arm === row.arm);
         return {
             run: runDir, case: row.case, arm: row.arm, resolved: grade.resolved_ids.includes(row.case), staleShown: shown?.counts.stale.shown ?? 0,
-            staleCommands: staleCommands(item, resolve(runDir, `${row.key}.events.jsonl`)), inputTokens: row.input + row.cacheRead + row.cacheWrite, toolCalls: row.toolCalls,
+            staleSymbols: staleSymbols(item).length, staleCommands: staleCommands(item, resolve(runDir, `${row.key}.events.jsonl`)), inputTokens: row.input + row.cacheRead + row.cacheWrite, toolCalls: row.toolCalls,
         };
     });
 }
@@ -72,11 +72,11 @@ export function formatReport(cells: Cell[]): string {
     const runsPer = (id: string, arm: string) => cells.filter(cell => cell.case === id && cell.arm === arm).length;
     const lines = [`| Case | ${arms.join(" | ")} |`, `| --- |${" --- |".repeat(arms.length)}`];
     for (const id of caseIds) lines.push(`| ${id} | ${arms.map(arm => `${rate(id, arm)}/${runsPer(id, arm)}`).join(" | ")} |`);
-    lines.push("", "| Arm | Resolved | Stale notes shown | Stale-symbol commands | Input tokens | Tool calls |", "| --- | --- | --- | --- | --- | --- |");
+    lines.push("", "| Arm | Resolved | Stale notes shown | Stale-symbol commands (countable symbols) | Input tokens | Tool calls |", "| --- | --- | --- | --- | --- | --- |");
     for (const arm of arms) {
         const own = cells.filter(cell => cell.arm === arm);
         const total = (value: (cell: Cell) => number) => own.reduce((sum, cell) => sum + value(cell), 0);
-        lines.push(`| ${arm} | ${own.filter(cell => cell.resolved).length}/${own.length} | ${total(cell => cell.staleShown)} | ${total(cell => cell.staleCommands)} | ${total(cell => cell.inputTokens)} | ${total(cell => cell.toolCalls)} |`);
+        lines.push(`| ${arm} | ${own.filter(cell => cell.resolved).length}/${own.length} | ${total(cell => cell.staleShown)} | ${total(cell => cell.staleCommands)} (${total(cell => cell.staleSymbols)}) | ${total(cell => cell.inputTokens)} | ${total(cell => cell.toolCalls)} |`);
     }
     lines.push("", "| Comparison | Cases differing | Wins | Sign test p |", "| --- | --- | --- | --- |");
     for (const [index, treated] of arms.entries()) {

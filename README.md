@@ -128,6 +128,7 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
 - Kind rules are line heuristics on `git diff --unified=0` hunks; a rewrite split across hunks counts as `deleted`.
 - Age buckets are targets: each revision is the newest commit to the file at or before its target date.
 - Regenerating the pool invalidates earlier runs; `report` refuses runs made on a different `cases.json`.
+- Under the default selection no case has a countable stale symbol, so stale-symbol commands are 0 by construction; the report prints the countable count beside it. Use `--kinds renamed,deleted --stale all` when that metric matters.
 
 ## License
 
