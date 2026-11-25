@@ -6,7 +6,7 @@ import { parseArgs } from "node:util";
 import { exposure } from "../src/adapter.ts";
 import { cases, type Case } from "../src/cases.ts";
 import { command } from "../src/command.ts";
-import { signTest } from "../src/report.ts";
+import { signTest, staleSymbols } from "../src/report.ts";
 import { parseSelection, selectionOptions, selectNotes } from "../src/select.ts";
 import { findStale, type FileChange } from "../src/staleness/index.ts";
 
@@ -44,6 +44,15 @@ test("a new class with the same base is not mistaken for a rename", () => {
         hunks: [{ removed: ["class Gone(Base):"], added: [] }, { removed: [], added: ["class Fresh(Base):"] }],
     };
     expect(findStale(change, change.oldLines)).toEqual([{ kind: "deleted", excerpt: "class Gone(Base):" }]);
+});
+
+test("only stale names gone from the base file count as evidence", () => {
+    const item = selectNotes(cases[0], select("--stale", "all", "--fresh", "0"));
+    const names = staleSymbols(item);
+    expect(names.length).toBeGreaterThan(0);
+    expect(names).not.toContain("__init__");
+    const edited = item.notes.find(note => note.kind === "edited" && /^\s*def /.test(note.excerpt))!;
+    expect(names).not.toContain(/def\s+(\w+)/.exec(edited.excerpt)![1]);
 });
 
 test("selection filters by kind, relevance and age, and doses deterministically", () => {

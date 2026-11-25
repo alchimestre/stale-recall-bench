@@ -2,7 +2,7 @@
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { cases, root, sha256, type Case } from "./cases.ts";
+import { cases, fileAt, root, sha256, type Case } from "./cases.ts";
 import { selectNotes, type Selection } from "./select.ts";
 import { symbol } from "./staleness/lines.ts";
 
@@ -10,6 +10,8 @@ type Exposure = { event: "exposure"; case: string; arm: string; counts: { stale:
 type Session = { event: "session"; case: string; arm: string; key: string; input: number; cacheRead: number; cacheWrite: number; toolCalls: number };
 type Manifest = { selection: Selection; harness: Record<string, string> };
 export type Cell = { run: string; case: string; arm: string; resolved: boolean; staleShown: number; staleCommands: number; inputTokens: number; toolCalls: number };
+
+const minEvidenceSymbolLength = 6;
 
 if (import.meta.main) {
     const runs = Bun.argv.slice(2);
@@ -24,6 +26,7 @@ function manifestOf(runDir: string): Manifest {
     // JSON turns an unlimited dose or age into null.
     manifest.selection.stale ??= Number.POSITIVE_INFINITY;
     manifest.selection.maxAgeDays ??= Number.POSITIVE_INFINITY;
+    manifest.selection.fresh ??= Number.POSITIVE_INFINITY;
     assert.equal(manifest.harness["cases.json"], sha256(readFileSync(resolve(root, "cases.json"), "utf8")), `${runDir} ran on a different cases.json`);
     return manifest;
 }
@@ -47,9 +50,19 @@ function load(runDir: string): Cell[] {
 
 // Shell commands naming a stale note's symbol: evidence the agent followed the stale note.
 function staleCommands(item: Case, eventsPath: string): number {
-    const symbols = item.notes.filter(note => note.label === "stale").map(note => symbol(note.excerpt)).filter(Boolean);
+    const symbols = staleSymbols(item);
     const events: { type?: string; args?: { command?: string } }[] = readFileSync(eventsPath, "utf8").split("\n").filter(line => line.startsWith("{")).map(line => JSON.parse(line));
     return events.filter(event => event.type === "tool_execution_start" && symbols.some(name => event.args?.command?.includes(name))).length;
+}
+
+// Only names absent from the note's file at base count; an edited `def run` keeps its name, so naming it proves nothing.
+// Dunders and short names (`main`, `run`) appear in commands for unrelated reasons. Notes whose file left the path cannot be judged.
+export function staleSymbols(item: Case): string[] {
+    const stale = item.notes.filter(note => note.label === "stale" && note.kind !== "moved");
+    const named = stale.map(note => ({ name: symbol(note.excerpt), baseText: fileAt(item.base, note.path) }));
+    const distinctive = named.filter(({ name }) => name.length >= minEvidenceSymbolLength && !name.startsWith("__"));
+    const gone = distinctive.filter(({ name, baseText }) => baseText !== undefined && !new RegExp(`\\b${name.replaceAll(".", "\\.")}\\b`).test(baseText));
+    return [...new Set(gone.map(({ name }) => name))];
 }
 
 export function formatReport(cells: Cell[]): string {

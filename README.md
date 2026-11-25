@@ -112,7 +112,7 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
    scripts/grade.sh 3 runs/opus-1
    ```
 
-5. Report: resolution per case and arm, stale notes shown, shell commands naming a stale note's symbol, tokens, tool calls, and a two-sided sign test per arm pair. Pass several run dirs with the same selection to pool replicates.
+5. Report: resolution per case and arm, stale notes shown, shell commands naming a stale symbol that no longer exists in its file (6+ characters, no dunders), tokens, tool calls, and a two-sided sign test per arm pair. Pass several run dirs with the same selection to pool replicates.
 
    ```sh
    bun run report runs/opus-1 runs/opus-2 runs/opus-3
