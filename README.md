@@ -26,21 +26,20 @@ Exposure tier, default selection: 12 stale and 12 fresh notes on each of 5 cases
 | supermemory | Hybrid search on the issue text returns about 9 notes per case, stale or fresh |
 | kage | Withholds every note on a file that changed since capture, true ones included; its 10 stale "shown" are quoted inside its `Withheld (stale — not served)` list |
 
-Agent tier, `anthropic/claude-opus-5-5`, default selection, one replicate per run. Each run has its own `none` arm.
+Agent tier, `anthropic/claude-opus-5-5`, default selection, one replicate: every arm ran in the same run, 35 sessions.
 
-| Run | Arm | Resolved | Unresolved cases | Stale notes shown | Input tokens | Tool calls |
-| --- | --- | --- | --- | --- | --- | --- |
-| A | none | 4/5 | 7590 | 0 | 461,166 | 54 |
-| A | flat | 4/5 | 7590 | 60 | 550,712 | 53 |
-| A | lore | 4/5 | 7590 | 56 | 467,335 | 48 |
-| B | none | 4/5 | 11510 | 0 | 467,639 | 53 |
-| B | truthiness | 4/5 | 7590 | 0 | 473,118 | 51 |
-| B | kage | 4/5 | 7590 | 10 | 564,434 | 53 |
-| B | mem0 | 4/5 | 7590 | 47 | 299,752 | 41 |
-| C | none | 4/5 | 7590 | 0 | 376,096 | 48 |
-| C | supermemory | 3/5 | 7590, 8548 | 22 | 487,003 | 52 |
+| Arm | Resolved | Unresolved cases | Stale notes shown | Input tokens | Tool calls |
+| --- | --- | --- | --- | --- | --- |
+| none | 5/5 | | 0 | 341,050 | 43 |
+| flat | 4/5 | 7590 | 60 | 362,322 | 44 |
+| truthiness | 3/5 | 7590, 8548 | 0 | 439,009 | 44 |
+| lore | 5/5 | | 56 | 623,149 | 57 |
+| kage | 3/5 | 7590, 8548 | 10 | 611,501 | 54 |
+| mem0 | 4/5 | 7590 | 47 | 499,620 | 53 |
+| supermemory | 4/5 | 7590 | 22 | 422,817 | 52 |
 
-- Every arm except supermemory resolves 4 of 5 cases; supermemory resolves 3, one case below its `none`. The `none` arm alone differs on 2 of 5 cases across runs, so one replicate separates no arm from another.
+- No arm pair differs on more than 2 of 5 cases; the smallest sign-test p is 0.5, so this replicate separates no arm from another.
+- Earlier single-replicate runs with the same model and selection resolved 4/5 with `none` three times, failing 7590 twice and 11510 once; `none` alone moves by up to 2 cases between replicates.
 - No session ran a shell command naming a stale symbol, in any arm.
 
 ## Disclosure
@@ -62,7 +61,17 @@ Agent tier, `anthropic/claude-opus-5-5`, default selection, one replicate per ru
 | `adapters/mem0.py` | `mem0ai` pinned in the script header | `Memory.add(infer=False)`, local fastembed embedder | `Memory.search` on the issue text | `uv`; no API key |
 | `adapters/supermemory.ts` | Supermemory local `server-v0.0.9` | `POST /v3/documents` per note, waits until processed | `POST /v4/search` hybrid on the issue text | Supermemory local running; `SUPERMEMORY_API_KEY`, `SUPERMEMORY_URL` (default `http://127.0.0.1:6767`) |
 
-Start Supermemory local before its exposure or agent run. Its server needs an OpenAI-compatible LLM endpoint configured at startup; the runs above made no calls to it.
+Start Supermemory local before its exposure or agent run. Its memory agent needs an OpenAI-compatible LLM endpoint with tool calling; the results above used Claude Haiku behind a local shim. Memory inference runs later on a server schedule, so recall right after ingest searches the stored documents. Without more ingest slots, new documents queue behind that inference and ingest times out. The upstream `compose.yaml` does not pass these settings through; set them in an override file next to it.
+
+```yaml
+# compose.override.yaml
+services:
+  supermemory:
+    environment:
+      - OPENAI_BASE_URL=https://your-llm-endpoint/v1
+      - OPENAI_MODEL=your-model
+      - SUPERMEMORY_INGEST_CONCURRENCY=256
+```
 
 ```sh
 curl -fL https://github.com/supermemoryai/supermemory/releases/download/server-v0.0.9/compose.yaml -o compose.yaml

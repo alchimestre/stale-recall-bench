@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
-// Supermemory adapter: ingest adds each note as a document under a per-case container tag; recall prints hybrid-search chunks for the issue text.
+// Supermemory adapter: ingest adds each note as a document under a per-case container tag; recall prints hybrid-search results for the issue text.
 import { createHash } from "node:crypto";
 
 type Note = { path: string; excerpt: string; revision: string };
@@ -36,6 +36,7 @@ if (step === "ingest") {
 async function waitUntilDone(id: string): Promise<void> {
     for (let attempt = 0; attempt < pollLimit; attempt++) {
         const { status } = await call(`/v3/documents/${id}`);
+        // Memory inference ("dreaming") runs later on a server schedule; recall sees what a user would right after ingest.
         if (status === "done") return;
         if (status === "failed") throw new Error(`Supermemory failed to process document ${id}`);
         await Bun.sleep(pollMs);
