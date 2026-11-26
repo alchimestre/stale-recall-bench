@@ -7,7 +7,7 @@ A benchmark for coding-agent memory: it feeds your memory system notes that were
 | Fact | Detail |
 | --- | --- |
 | Origin | Built by the author of [Truthiness](https://github.com/alchimestre/truthiness), a memory system this benchmark can score |
-| Bundled memory systems | `adapters/truthiness.ts`, pinned to the `truthiness` npm package in `package.json`; `adapters/flat.ts` is a reference control, not a candidate |
+| Bundled memory systems | `adapters/truthiness.ts`, pinned to the `truthiness` npm package in `package.json`; `adapters/lore.ts`, calling an installed [LORE](https://github.com/alchimestre/LORE) CLI; `adapters/flat.ts` is a reference control, not a candidate |
 | Case selection | Cases, note pool, staleness rules and the default dose were fixed before Truthiness was first scored |
 | Scoring change after a Truthiness run | Exposure decodes JSON string escapes, added once a Truthiness run showed escaped fresh excerpts going uncounted; it applies to every arm and leaves `flat` at 60/60 |
 
@@ -100,8 +100,11 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
    | flat | 60/60 | 60/60 | 2/2 | 8/8 | 26/26 | 24/24 | 31/31 | 29/29 |
    | ideal | 0/60 | 60/60 | 0/2 | 0/8 | 0/26 | 0/24 | 0/31 | 0/29 |
    | truthiness | 0/60 | 60/60 | 0/2 | 0/8 | 0/26 | 0/24 | 0/31 | 0/29 |
+   | lore | 56/60 | 58/60 | 1/2 | 8/8 | 23/26 | 24/24 | 30/31 | 26/29 |
 
    `adapters/truthiness.ts` reads `TRUTHINESS_CLI` (default: the pinned package) and `TRUTHINESS_BOOTSTRAP=off` to skip seeding the store from source.
+
+   `adapters/lore.ts` reads `LORE_CLI` (default: `lore` on `PATH`). LORE collapses runs of spaces, so its 6 misses are excerpts with double spaces; it shows every note it stores.
 
 3. Agent tier: one [OMP](https://github.com/can1357/oh-my-pi) session per case and arm in an offline AMD64 SWE-bench container. Arm `none` gets no recall; each adapter adds one arm. Requires Docker, `omp`, `uv`, `jq`, credentials for the model, and the images listed in `cases.json`.
 
@@ -112,6 +115,12 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
 
 4. Grade with `swebench==4.1.0`.
 
+   On an ARM host the grader pulls `:latest` for the host platform and fails; tag the pinned images first.
+
+   ```sh
+   for image in $(jq -r '.cases[].image' cases.json); do docker tag "$image" "${image%@*}:latest"; done
+   ```
+
    ```sh
    scripts/grade.sh 3 runs/opus-1
    ```
@@ -121,6 +130,16 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
    ```sh
    bun run report runs/opus-1 runs/opus-2 runs/opus-3
    ```
+
+   `anthropic/claude-opus-5-5`, default selection, one replicate:
+
+   | Arm | Resolved | Stale notes shown | Stale-symbol commands (countable symbols) | Input tokens | Tool calls |
+   | --- | --- | --- | --- | --- | --- |
+   | none | 4/5 | 0 | 0 (12) | 461166 | 54 |
+   | flat | 4/5 | 60 | 0 (12) | 550712 | 53 |
+   | lore | 4/5 | 56 | 0 (12) | 467335 | 48 |
+
+   Every arm fails `7590` and resolves the other four; no arm pair differs on any case.
 
 ## Limits
 
