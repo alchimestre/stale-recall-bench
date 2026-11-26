@@ -1,15 +1,74 @@
-# stale-recall-bench
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%" alt="stale-recall-bench: stale and fresh notes shown at session start by flat, lore, mem0, supermemory, kage and truthiness">
+</p>
 
-A benchmark for coding-agent memory: it feeds your memory system notes that were true when written but are now stale, plus still-true controls, and measures what it shows the agent. An optional agent tier runs real SWE-bench Verified tasks with each system's recall and grades the patches.
+A benchmark for coding-agent memory: it feeds a memory system notes that were true when written but are now stale, plus still-true controls, and measures what it shows the agent. An optional agent tier runs real SWE-bench Verified tasks with each system's recall and grades the patches.
+
+## Results
+
+Exposure tier, default selection: 12 stale and 12 fresh notes on each of 5 cases.
+
+| Arm | stale shown | fresh shown | kind:moved | kind:renamed | kind:edited | kind:deleted | relevance:fix-path | relevance:off-path |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| flat | 60/60 | 60/60 | 2/2 | 8/8 | 26/26 | 24/24 | 31/31 | 29/29 |
+| ideal | 0/60 | 60/60 | 0/2 | 0/8 | 0/26 | 0/24 | 0/31 | 0/29 |
+| [truthiness](https://github.com/alchimestre/truthiness) | 0/60 | 60/60 | 0/2 | 0/8 | 0/26 | 0/24 | 0/31 | 0/29 |
+| [lore](https://github.com/alchimestre/LORE) | 56/60 | 58/60 | 1/2 | 8/8 | 23/26 | 24/24 | 30/31 | 26/29 |
+| [mem0](https://github.com/mem0ai/mem0) | 47/60 | 53/60 | 1/2 | 5/8 | 23/26 | 18/24 | 28/31 | 19/29 |
+| [supermemory](https://github.com/supermemoryai/supermemory) | 22/60 | 21/60 | 0/2 | 3/8 | 10/26 | 9/24 | 16/31 | 6/29 |
+| [kage](https://github.com/kage-core/Kage) | 10/60 | 4/60 | 0/2 | 3/8 | 4/26 | 3/24 | 6/31 | 4/29 |
+
+| Arm | How it behaves on this bench |
+| --- | --- |
+| truthiness | Rechecks each quote against the checkout; serves fresh notes, drops stale ones |
+| lore | Serves every stored note; its 6 misses are excerpts whose runs of spaces it collapses |
+| mem0 | Similarity search on the issue text, no staleness check; serves whatever ranks high |
+| supermemory | Hybrid search on the issue text returns about 9 notes per case, stale or fresh |
+| kage | Withholds every note on a file that changed since capture, true ones included; its 10 stale "shown" are quoted inside its `Withheld (stale — not served)` list |
+
+Agent tier, `anthropic/claude-opus-5-5`, default selection, one replicate per run. Each run has its own `none` arm.
+
+| Run | Arm | Resolved | Unresolved cases | Stale notes shown | Input tokens | Tool calls |
+| --- | --- | --- | --- | --- | --- | --- |
+| A | none | 4/5 | 7590 | 0 | 461,166 | 54 |
+| A | flat | 4/5 | 7590 | 60 | 550,712 | 53 |
+| A | lore | 4/5 | 7590 | 56 | 467,335 | 48 |
+| B | none | 4/5 | 11510 | 0 | 467,639 | 53 |
+| B | truthiness | 4/5 | 7590 | 0 | 473,118 | 51 |
+| B | kage | 4/5 | 7590 | 10 | 564,434 | 53 |
+| B | mem0 | 4/5 | 7590 | 47 | 299,752 | 41 |
+| C | none | 4/5 | 7590 | 0 | 376,096 | 48 |
+| C | supermemory | 3/5 | 7590, 8548 | 22 | 487,003 | 52 |
+
+- Every arm except supermemory resolves 4 of 5 cases; supermemory resolves 3, one case below its `none`. The `none` arm alone differs on 2 of 5 cases across runs, so one replicate separates no arm from another.
+- No session ran a shell command naming a stale symbol, in any arm.
 
 ## Disclosure
 
 | Fact | Detail |
 | --- | --- |
-| Origin | Built by the author of [Truthiness](https://github.com/alchimestre/truthiness), a memory system this benchmark can score |
-| Bundled memory systems | `adapters/truthiness.ts`, pinned to the `truthiness` npm package in `package.json`; `adapters/lore.ts`, calling an installed [LORE](https://github.com/alchimestre/LORE) CLI; `adapters/flat.ts` is a reference control, not a candidate |
+| Origin | Built by the author of [Truthiness](https://github.com/alchimestre/truthiness) and [LORE](https://github.com/alchimestre/LORE), two memory systems this benchmark scores |
 | Case selection | Cases, note pool, staleness rules and the default dose were fixed before Truthiness was first scored |
 | Scoring change after a Truthiness run | Exposure decodes JSON string escapes, added once a Truthiness run showed escaped fresh excerpts going uncounted; it applies to every arm and leaves `flat` at 60/60 |
+| Reference arms | `flat` (every note, verbatim) and `ideal` (fresh notes only) are controls, not candidates |
+
+## Memory systems
+
+| Adapter | Version | Ingest | Recall | Setup |
+| --- | --- | --- | --- | --- |
+| `adapters/truthiness.ts` | `truthiness` in `package.json` | Each note published as an exact quote | Startup index | none; `TRUTHINESS_CLI` overrides the binary, `TRUTHINESS_BOOTSTRAP=off` skips seeding from source |
+| `adapters/lore.ts` | installed CLI | `lore memory add --scope project` per note | `lore inject` snapshot | `LORE_CLI` (default: `lore` on `PATH`) |
+| `adapters/kage.ts` | `@kage-core/kage-graph-mcp` in `package.json` | `kage learn --type reference` per note, citing its file | `kage recall` on the issue text, 1,200-token budget | none; `KAGE_CLI` overrides the binary |
+| `adapters/mem0.py` | `mem0ai` pinned in the script header | `Memory.add(infer=False)`, local fastembed embedder | `Memory.search` on the issue text | `uv`; no API key |
+| `adapters/supermemory.ts` | Supermemory local `server-v0.0.9` | `POST /v3/documents` per note, waits until processed | `POST /v4/search` hybrid on the issue text | Supermemory local running; `SUPERMEMORY_API_KEY`, `SUPERMEMORY_URL` (default `http://127.0.0.1:6767`) |
+
+Start Supermemory local before its exposure or agent run. Its server needs an OpenAI-compatible LLM endpoint configured at startup; the runs above made no calls to it.
+
+```sh
+curl -fL https://github.com/supermemoryai/supermemory/releases/download/server-v0.0.9/compose.yaml -o compose.yaml
+SUPERMEMORY_VERSION=0.0.9 OPENAI_API_KEY=... docker compose up -d --wait
+export SUPERMEMORY_API_KEY=$(docker compose exec supermemory cat /data/api-key)
+```
 
 ## Cases
 
@@ -95,17 +154,6 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
    bun run exposure adapters/flat.ts path/to/your-adapter
    ```
 
-   | Arm | stale | fresh | kind:moved | kind:renamed | kind:edited | kind:deleted | relevance:fix-path | relevance:off-path |
-   | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-   | flat | 60/60 | 60/60 | 2/2 | 8/8 | 26/26 | 24/24 | 31/31 | 29/29 |
-   | ideal | 0/60 | 60/60 | 0/2 | 0/8 | 0/26 | 0/24 | 0/31 | 0/29 |
-   | truthiness | 0/60 | 60/60 | 0/2 | 0/8 | 0/26 | 0/24 | 0/31 | 0/29 |
-   | lore | 56/60 | 58/60 | 1/2 | 8/8 | 23/26 | 24/24 | 30/31 | 26/29 |
-
-   `adapters/truthiness.ts` reads `TRUTHINESS_CLI` (default: the pinned package) and `TRUTHINESS_BOOTSTRAP=off` to skip seeding the store from source.
-
-   `adapters/lore.ts` reads `LORE_CLI` (default: `lore` on `PATH`). LORE collapses runs of spaces, so its 6 misses are excerpts with double spaces; it shows every note it stores.
-
 3. Agent tier: one [OMP](https://github.com/can1357/oh-my-pi) session per case and arm in an offline AMD64 SWE-bench container. Arm `none` gets no recall; each adapter adds one arm. Requires Docker, `omp`, `uv`, `jq`, credentials for the model, and the images listed in `cases.json`.
 
    ```sh
@@ -131,22 +179,13 @@ Requirements: Bun 1.4, Git, network access for the first run (sphinx clone and t
    bun run report runs/opus-1 runs/opus-2 runs/opus-3
    ```
 
-   `anthropic/claude-opus-5-5`, default selection, one replicate:
-
-   | Arm | Resolved | Stale notes shown | Stale-symbol commands (countable symbols) | Input tokens | Tool calls |
-   | --- | --- | --- | --- | --- | --- |
-   | none | 4/5 | 0 | 0 (12) | 461166 | 54 |
-   | flat | 4/5 | 60 | 0 (12) | 550712 | 53 |
-   | lore | 4/5 | 56 | 0 (12) | 467335 | 48 |
-
-   Every arm fails `7590` and resolves the other four; no arm pair differs on any case.
-
 ## Limits
 
 - The case is the sampling unit: with 5 cases the smallest sign-test p is 0.0625, so no single comparison reaches 0.05.
+- Pool only runs with the same arms: pooling runs that share `none` gives `none` more replicates than the other arms, and the sign test then counts replicate imbalance as wins.
 - Never pool runs from different models.
 - Agent-tier sessions get one tool, a shell inside the task container, with no network and a single-commit history.
-- Exposure matching is verbatim after decoding JSON string escapes; a system that paraphrases notes scores as showing none of them.
+- Exposure matching is verbatim after decoding JSON string escapes; a system that paraphrases notes scores as showing none of them, and a note quoted inside a withheld list still counts as shown.
 - Sphinx has almost no `moved` notes (2); `--kinds moved` leaves most cases empty.
 - Kind rules are line heuristics on `git diff --unified=0` hunks; a rewrite split across hunks counts as `deleted`.
 - Age buckets are targets: each revision is the newest commit to the file at or before its target date.
