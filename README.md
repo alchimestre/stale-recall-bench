@@ -39,6 +39,7 @@ Agent tier, `anthropic/claude-opus-5-5`, default selection, one replicate: every
 | supermemory | 4/5 | 7590 | 22 | 422,817 | 52 |
 
 - No arm pair differs on more than 2 of 5 cases; the smallest sign-test p is 0.5, so this replicate separates no arm from another.
+- Earlier single-replicate runs with the same model and selection resolved 4/5 with `none` three times, failing 7590 twice and 11510 once; `none` alone moves by up to 2 cases between replicates.
 - No session ran a shell command naming a stale symbol, in any arm.
 
 ## Disclosure
@@ -60,7 +61,7 @@ Agent tier, `anthropic/claude-opus-5-5`, default selection, one replicate: every
 | `adapters/mem0.py` | `mem0ai` pinned in the script header | `Memory.add(infer=False)`, local fastembed embedder | `Memory.search` on the issue text | `uv`; no API key |
 | `adapters/supermemory.ts` | Supermemory local `server-v0.0.9` | `POST /v3/documents` per note, waits until processed | `POST /v4/search` hybrid on the issue text | Supermemory local running; `SUPERMEMORY_API_KEY`, `SUPERMEMORY_URL` (default `http://127.0.0.1:6767`) |
 
-Start Supermemory local before its exposure or agent run. Its memory agent needs an OpenAI-compatible LLM endpoint with tool calling; memory inference runs later on a server schedule, so recall right after ingest searches the stored documents. Without more ingest slots, new documents queue behind that inference and ingest times out.
+Start Supermemory local before its exposure or agent run. Its memory agent needs an OpenAI-compatible LLM endpoint with tool calling; the results above used Claude Haiku behind a local shim. Memory inference runs later on a server schedule, so recall right after ingest searches the stored documents. Without more ingest slots, new documents queue behind that inference and ingest times out. The upstream `compose.yaml` does not pass these settings through; set them in an override file next to it.
 
 ```yaml
 # compose.override.yaml
