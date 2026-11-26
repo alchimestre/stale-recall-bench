@@ -14,6 +14,7 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
+    "@kage-core/kage-graph-mcp": "5.0.0",
     "@oh-my-pi/pi-coding-agent": "19.0.1",
     "@types/bun": "1.4.4",
     "truthiness": "0.2.0",
